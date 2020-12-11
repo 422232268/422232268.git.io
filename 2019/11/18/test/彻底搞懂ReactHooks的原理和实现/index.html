@@ -49,6 +49,7 @@
 
 <script src="/js/iconfont.js?v=1.0.1" ></script>
 
+<link rel="alternate" href="/atom.xml" title="Tim blog" type="application/atom+xml">
 </head>
 <div style="display: none">
   <input class="theme_disqus_on" value="false">
@@ -151,7 +152,7 @@
     
         
             
-            <li><div data-rel="web">web<small>(5)</small></div>
+            <li><div data-rel="React">React<small>(2)</small></div>
                 
             </li>
             
@@ -159,7 +160,7 @@
     
         
             
-            <li><div data-rel="React">React<small>(2)</small></div>
+            <li><div data-rel="web">web<small>(5)</small></div>
                 
             </li>
             
@@ -236,7 +237,7 @@
         </a>
         
         <a  class="React "
-           href="/2019/11/18/test/%E5%BD%BB%E5%BA%95%E6%90%9E%E6%87%82ReactHooks%E7%9A%84%E5%8E%9F%E7%90%86%E5%92%8C%E5%AE%9E%E7%8E%B0/"
+           href="/2019/11/18/test/test/"
            data-tag=""
            data-author="" >
             <span class="post-title" title="彻底搞懂ReactHooks的原理和实现">彻底搞懂ReactHooks的原理和实现</span>
@@ -244,7 +245,7 @@
         </a>
         
         <a  class="React "
-           href="/2019/11/18/test/test/"
+           href="/2019/11/18/test/%E5%BD%BB%E5%BA%95%E6%90%9E%E6%87%82ReactHooks%E7%9A%84%E5%8E%9F%E7%90%86%E5%92%8C%E5%AE%9E%E7%8E%B0/"
            data-tag=""
            data-author="" >
             <span class="post-title" title="彻底搞懂ReactHooks的原理和实现">彻底搞懂ReactHooks的原理和实现</span>
@@ -329,7 +330,7 @@
     </div>
     <div class="article-meta">
         
-        创建时间:<time class="date" title='更新时间: 2020-10-19 12:06:49'>2019-11-18 13:29</time>
+        创建时间:<time class="date" title='更新时间: 2020-12-11 21:30:33'>2019-11-18 13:29</time>
         
     </div>
     <div class="article-meta">
@@ -351,7 +352,7 @@
     
     <div class="toc-ref">
     
-        <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#摘要"><span class="toc-text">摘要</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#当使用Hook特性编写组件的时候-总能感觉到它的简洁和方便-当然-天下没有-免费的午餐-它牺牲了可读性并且存在内存泄漏风险-但这并不妨碍探索它的能力"><span class="toc-text">当使用Hook特性编写组件的时候,总能感觉到它的简洁和方便.当然,天下没有{免费的午餐},它牺牲了可读性并且存在内存泄漏风险,但这并不妨碍探索它的能力</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#在正式开始前-我打算先提出几个问题-这些问题会在源码实现的过程中-逐步解决"><span class="toc-text">在正式开始前,我打算先提出几个问题,这些问题会在源码实现的过程中,逐步解决</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#以上代码均由TypeScript来实现-文中全部dome均在github中实现"><span class="toc-text">以上代码均由TypeScript来实现,文中全部dome均在github中实现</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#useState的实现原理"><span class="toc-text">useState的实现原理</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#为什么不能在循环、判断内部使用Hook"><span class="toc-text">为什么不能在循环、判断内部使用Hook</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#useEffect-的实现原理"><span class="toc-text">useEffect 的实现原理</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Class-VS-Hooks"><span class="toc-text">Class VS Hooks</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#参考链接"><span class="toc-text">参考链接</span></a></li></ol>
+        <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#摘要"><span class="toc-text">摘要</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#当使用Hook特性编写组件的时候-总能感觉到它的简洁和方便-当然-天下没有-免费的午餐-它牺牲了可读性并且存在内存泄漏风险-但这并不妨碍探索它的能力"><span class="toc-text">当使用Hook特性编写组件的时候,总能感觉到它的简洁和方便.当然,天下没有{免费的午餐},它牺牲了可读性并且存在内存泄漏风险,但这并不妨碍探索它的能力</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#在正式开始前-我打算先提出几个问题-这些问题会在源码实现的过程中-逐步解决"><span class="toc-text">在正式开始前,我打算先提出几个问题,这些问题会在源码实现的过程中,逐步解决</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#以上代码均由TypeScript来实现-文中全部dome均在github中实现"><span class="toc-text">以上代码均由TypeScript来实现,文中全部dome均在github中实现</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#为什么不能在循环、判断内部使用Hook"><span class="toc-text">为什么不能在循环、判断内部使用Hook</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#useEffect-的实现原理"><span class="toc-text">useEffect 的实现原理</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Class-VS-Hooks"><span class="toc-text">Class VS Hooks</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#参考链接"><span class="toc-text">参考链接</span></a></li></ol>
     
 <style>
     .left-col .switch-btn,
@@ -374,7 +375,17 @@
 <li>useEffect的应用场景</li>
 <li><code>Class</code> vs <code>Hooks</code></li>
 </ul>
-<h4 id="以上代码均由TypeScript来实现-文中全部dome均在github中实现"><a href="#以上代码均由TypeScript来实现-文中全部dome均在github中实现" class="headerlink" title="以上代码均由TypeScript来实现,文中全部dome均在github中实现"></a>以上代码均由TypeScript来实现,文中全部dome均在<a href="gist.github.com/dongyuanxin/">github</a>中实现</h4><h3 id="useState的实现原理"><a href="#useState的实现原理" class="headerlink" title="useState的实现原理"></a>useState的实现原理</h3><ul>
+<h4 id="以上代码均由TypeScript来实现-文中全部dome均在github中实现"><a href="#以上代码均由TypeScript来实现-文中全部dome均在github中实现" class="headerlink" title="以上代码均由TypeScript来实现,文中全部dome均在github中实现"></a>以上代码均由TypeScript来实现,文中全部dome均在<a href="gist.github.com/dongyuanxin/">github</a>中实现</h4><details>
+  <summary><mark><font color=darkred>点击查看详细内容</font></mark></summary>
+  <p> - 测试 测试测试</p>
+  <pre><code>
+for i in a:
+    print(i)
+  </code></pre>
+</details>
+### useState的实现原理
+
+<ul>
 <li>当调用useState的时候,回返回形如<code>(变量,函数)</code>的一个组件.并且state的初始值就是外部调用useState的时候传入的参数</li>
 <li>理清楚了传参和返回值,再来看下useState还做了些什么.正如下面的代码所示,当点击按钮的时候,执行setNum.状态num被更新,并且UI识图更新.显然,useState翻的用于更改状态的函数,自动调用了<code>render</code> 方法来触发视图更新</li>
 </ul>
@@ -676,7 +687,7 @@ render();</code></pre>
     
     <p><span class="copy-title">本文作者:</span><a  title="Tim wong">Tim wong</a></p>
     <p><span class="copy-title">发布时间:</span>2019-11-18, 13:29:22</p>
-    <p><span class="copy-title">最后更新:</span>2020-10-19, 12:06:49</p>
+    <p><span class="copy-title">最后更新:</span>2020-12-11, 21:30:33</p>
     <span class="copy-title">原始链接:</span><a class="post-url" href="/2019/11/18/test/%E5%BD%BB%E5%BA%95%E6%90%9E%E6%87%82ReactHooks%E7%9A%84%E5%8E%9F%E7%90%86%E5%92%8C%E5%AE%9E%E7%8E%B0/" title="彻底搞懂ReactHooks的原理和实现">http://yoursite.com/2019/11/18/test/%E5%BD%BB%E5%BA%95%E6%90%9E%E6%87%82ReactHooks%E7%9A%84%E5%8E%9F%E7%90%86%E5%92%8C%E5%AE%9E%E7%8E%B0/</a>
     <p>
         <span class="copy-title">版权声明:</span><i class="fa fa-creative-commons"></i> <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/" title="CC BY-NC-SA 4.0 International" target = "_blank">"署名-非商用-相同方式共享 4.0"</a> 转载请保留原文链接及作者。
@@ -960,5 +971,12 @@ render();</code></pre>
 
 
 
+
+<div id="musicMouseDrag" style="position:fixed; z-index: 9999; bottom: -100; right: 0;">
+    <div id="musicDragArea"
+        style="position: absolute; top: 0; left: 0; width: 100%;height: 10px;cursor: move; z-index: 10;"></div>
+    <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=298 height=52
+        src="//music.163.com/outchain/player?type=2&id=5273817&auto=1&height=32"></iframe>
+</div>
 
 </html>

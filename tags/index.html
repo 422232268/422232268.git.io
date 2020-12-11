@@ -2,9 +2,9 @@
 <html>
 <head>
   <meta charset="utf-8">
-  <title>顺序图 | Tim blog</title>
-  <meta name="keywords" content=" frist ">
-  <meta name="description" content="顺序图 | Tim blog">
+  <title>tags | Tim blog</title>
+  <meta name="keywords" content="">
+  <meta name="description" content="tags | Tim blog">
     <!--
  * @Author: za-wangxuezhong
  * @Date: 2019-11-17 22:27:10
@@ -312,31 +312,19 @@
 </aside>
 <div class="post">
     <div class="pjax">
-        <article id="post-test/顺序图" class="article article-type-post" itemscope itemprop="blogPost">
+        <article id="page-" class="article article-type-page" itemscope itemprop="blogPost">
     
-        <h1 class="article-title">顺序图</h1>
+        <h1 class="article-title">tags</h1>
     
     <div class="article-meta">
         
         
         
-        <span class="book">
-            
-                <a  data-rel="web">web</a>
-            
-        </span>
-        
-        
-        <span class="tag">
-            
-            <a class="color1">frist</a>
-            
-        </span>
         
     </div>
     <div class="article-meta">
         
-        创建时间:<time class="date" title='更新时间: 2020-10-19 12:06:49'>2019-11-18 02:11</time>
+        创建时间:<time class="date" title='更新时间: 2020-12-11 21:41:45'>2020-12-11 21:41</time>
         
     </div>
     <div class="article-meta">
@@ -358,7 +346,7 @@
     
     <div class="toc-ref">
     
-        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#顺序图-基本语法"><span class="toc-text">顺序图-基本语法</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#渲染序列图"><span class="toc-text">渲染序列图</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#句法"><span class="toc-text">句法</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#别名"><span class="toc-text">别名</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#留言内容"><span class="toc-text">留言内容</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#激活方式"><span class="toc-text">激活方式</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#笔记"><span class="toc-text">笔记</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#循环"><span class="toc-text">循环</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Alt键"><span class="toc-text">Alt键</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#背景突出显示"><span class="toc-text">背景突出显示</span></a></li></ol></li></ol>
+        
     
 <style>
     .left-col .switch-btn,
@@ -375,253 +363,14 @@
     <div class="article-entry" itemprop="articleBody">
       
         <!--
- * @Author: za-wangxuezhong
- * @Date: 2019-11-17 22:19:51
+ * @Autor: za-wangxuezhong
+ * @Date: 2020-12-11 21:41:05
  * @LastEditors: za-wangxuezhong
- * @LastEditTime: 2019-11-20 21:17:10
- * @Description: file content
- -->
-
-<h2 id="顺序图-基本语法"><a href="#顺序图-基本语法" class="headerlink" title="顺序图-基本语法"></a>顺序图-基本语法</h2><blockquote>
-<p>序列图是一个交互图，它显示进程如何相互操作以及以什么顺序进行操作。</p>
-</blockquote>
-<h3 id="渲染序列图"><a href="#渲染序列图" class="headerlink" title="渲染序列图"></a>渲染序列图</h3><pre><code class="bash">sequenceDiagram
-    Alice-&gt;&gt;John: Hello John, how are you?
-    John--&gt;&gt;Alice: Great!
-</code></pre>
-<pre class="mermaid">sequenceDiagram
-    Alice->>John: Hello John, how are you?
-    John-->>Alice: Great!</pre>
-
-<h3 id="句法"><a href="#句法" class="headerlink" title="句法"></a>句法</h3><p>参加者<br>可以像本页第一个示例中那样隐式定义参与者。在图表源文本中按出现顺序呈现参与者或演员。有时，您可能想以不同于第一条消息出现的顺序来显示参与者。通过执行以下操作可以指定演员的出场顺序</p>
-<pre><code class="bash">sequenceDiagram
-    participant John
-    participant Alice
-    Alice-&gt;&gt;John: Hello John, how are you?
-    John--&gt;&gt;Alice: Great!
-</code></pre>
-<pre class="mermaid">sequenceDiagram
-    participant John
-    participant Alice
-    Alice->>John: Hello John, how are you?
-    John-->>Alice: Great!</pre>
-
-<h3 id="别名"><a href="#别名" class="headerlink" title="别名"></a>别名</h3><p>演员可以具有方便的标识符和描述性标签。</p>
-<pre><code class="bash">sequenceDiagram
-    participant A as Alice
-    participant J as John
-    A-&gt;&gt;J: Hello John, how are you?
-    J-&gt;&gt;A: Great!
-</code></pre>
-<pre class="mermaid">sequenceDiagram
-    participant A as Alice
-    participant J as John
-    A->>J: Hello John, how are you?
-    J->>A: Great!</pre>
-
-<h3 id="留言内容"><a href="#留言内容" class="headerlink" title="留言内容"></a>留言内容</h3><p>消息可以是实线或虚线显示的两种。</p>
-<pre><code class="bash">[Actor][Arrow][Actor]:Message text
-</code></pre>
-<table>
-<thead>
-<tr>
-<th>类型</th>
-<th>描述</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>-&gt;</td>
-<td>实线无箭头</td>
-</tr>
-<tr>
-<td>-&gt;</td>
-<td>虚线无箭头</td>
-</tr>
-<tr>
-<td>-&gt;&gt;</td>
-<td>带箭头的实线</td>
-</tr>
-<tr>
-<td>-&gt;&gt;</td>
-<td>带箭头的虚线</td>
-</tr>
-<tr>
-<td>-X</td>
-<td>实线，末端带有叉号（异步）</td>
-</tr>
-<tr>
-<td>- X</td>
-<td>虚线末端带有叉号（异步）</td>
-</tr>
-</tbody></table>
-<h3 id="激活方式"><a href="#激活方式" class="headerlink" title="激活方式"></a>激活方式</h3><p>可以激活和停用角色。（de）激活可以是专用的声明：</p>
-<pre><code class="bash">sequenceDiagram
-    Alice-&gt;&gt;John: Hello John, how are you?
-    activate John
-    John--&gt;&gt;Alice: Great!
-    deactivate John
-</code></pre>
-<pre class="mermaid">sequenceDiagram
-    Alice->>John: Hello John, how are you?
-    activate John
-    John-->>Alice: Great!
-    deactivate John</pre>
-
-<p>通过在消息箭头后面添加+/ -后缀，还有一种快捷方式标记：</p>
-<pre><code class="bash">sequenceDiagram
-    Alice-&gt;&gt;+John: Hello John, how are you?
-    John--&gt;&gt;-Alice: Great!
-</code></pre>
-<pre class="mermaid">sequenceDiagram
-    Alice->>+John: Hello John, how are you?
-    John-->>-Alice: Great!</pre>
-
-<p>可以为同一演员堆叠激活：</p>
-<pre><code class="bash">sequenceDiagram
-    Alice-&gt;&gt;+John: Hello John, how are you?
-    Alice-&gt;&gt;+John: John, can you hear me?
-    John--&gt;&gt;-Alice: Hi Alice, I can hear you!
-    John--&gt;&gt;-Alice: I feel great!
-</code></pre>
-<pre class="mermaid">sequenceDiagram
-Alice->>+John: Hello John, how are you?
-Alice->>+John: John, can you hear me?
-John-->>-Alice: Hi Alice, I can hear you!
-John-->>-Alice: I feel great!</pre>
-
-<h3 id="笔记"><a href="#笔记" class="headerlink" title="笔记"></a>笔记</h3><p>可以在顺序图中添加注释。这是通过注解[[右| 左| 结束] [演员]：笔记内容中的文字</p>
-<p>请参阅以下示例</p>
-<pre><code class="bash">sequenceDiagram
-    participant John
-    Note right of John: Text in note
-</code></pre>
-<pre class="mermaid">sequenceDiagram
-    participant John
-    Note right of John: Text in note</pre>
-
-<p>也可以创建跨越两个参与者的笔记：</p>
-<pre><code class="bash">sequenceDiagram
-    Alice-&gt;John: Hello John, how are you?
-    Note over Alice,John: A typical interaction
-</code></pre>
-<pre class="mermaid">sequenceDiagram
-    Alice->John: Hello John, how are you?
-    Note over Alice,John: A typical interaction</pre>
-
-<h3 id="循环"><a href="#循环" class="headerlink" title="循环"></a>循环</h3><pre><code class="bash">loop Loop text
-... statements ...
-end
-</code></pre>
-<p>请参阅以下示例：</p>
-<pre><code class="bash">sequenceDiagram
-    Alice-&gt;John: Hello John, how are you?
-    loop Every minute
-        John--&gt;Alice: Great!
-    end
-</code></pre>
-<pre class="mermaid">sequenceDiagram
-Alice->John: Hello John, how are you?
-loop Every minute
-    John-->Alice: Great!
-end</pre>
-
-<h3 id="Alt键"><a href="#Alt键" class="headerlink" title="Alt键"></a>Alt键</h3><p>可以在顺序图中表达替代路径。这是通过符号来完成的</p>
-<pre><code class="bash">alt Describing text
-... statements ...
-else
-... statements ...
-end
-</code></pre>
-<p>或者是否有可选的序列（如果没有其他序列）。</p>
-<pre><code class="bash">opt Describing text
-... statements ...
-end
-</code></pre>
-<p>请参阅以下示例：</p>
-<pre><code class="bash">sequenceDiagram
-    Alice-&gt;&gt;Bob: Hello Bob, how are you?
-    alt is sick
-        Bob-&gt;&gt;Alice: Not so good :(
-    else is well
-        Bob-&gt;&gt;Alice: Feeling fresh like a daisy
-    end
-    opt Extra response
-        Bob-&gt;&gt;Alice: Thanks for asking
-    end
-</code></pre>
-<pre class="mermaid">sequenceDiagram
-    Alice->>Bob: Hello Bob, how are you?
-    alt is sick
-        Bob->>Alice: Not so good :(
-    else is well
-        Bob->>Alice: Feeling fresh like a daisy
-    end
-    opt Extra response
-        Bob->>Alice: Thanks for asking
-    end</pre>
-
-<h3 id="背景突出显示"><a href="#背景突出显示" class="headerlink" title="背景突出显示"></a>背景突出显示</h3><p>通过提供彩色背景矩形可以突出显示流。这是通过符号来完成的</p>
-<p>颜色是使用rgb和rgba语法定义的。</p>
-<pre><code class="bash">rect rgb(0, 255, 0)
-... content ...
-end
-</code></pre>
-<table>
-<thead>
-<tr>
-<th>Class</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>actor</td>
-<td>Style for the actor box at the top of the diagram.</td>
-</tr>
-<tr>
-<td>text.actor</td>
-<td>Styles for text in the actor box at the top of the diagram.</td>
-</tr>
-<tr>
-<td>actor-line</td>
-<td>The vertical line for an actor.</td>
-</tr>
-<tr>
-<td>messageLine0</td>
-<td>Styles for the solid message line.</td>
-</tr>
-<tr>
-<td>messageLine1</td>
-<td>Styles for the dotted message line.</td>
-</tr>
-<tr>
-<td>messageText</td>
-<td>Defines styles for the text on the message arrows.</td>
-</tr>
-<tr>
-<td>labelBox</td>
-<td>Defines styles label to left in a loop.</td>
-</tr>
-<tr>
-<td>labelText</td>
-<td>Styles for the text in label for loops.</td>
-</tr>
-<tr>
-<td>loopText</td>
-<td>Styles for the text in the loop box.</td>
-</tr>
-<tr>
-<td>loopLine</td>
-<td>Defines styles for the lines in the loop box.</td>
-</tr>
-<tr>
-<td>note</td>
-<td>Styles for the note box.</td>
-</tr>
-<tr>
-<td>noteText</td>
-<td>Styles for the text on in the note boxes.</td>
-</tr>
-</tbody></table>
+ * @LastEditTime: 2020-12-11 21:41:44
+ * @Description:
+ * @ToDo:
+ * @JiraID: SOMPO-
+-->
 
       
        <hr><span style="font-style: italic;color: gray;"> 转载请注明来源，欢迎对文章中的引用来源进行考证，欢迎指出任何有错误或不够清晰的表达。可以在下面评论区评论，也可以邮件至 422232268@qq.com </span>
@@ -633,18 +382,6 @@ end
     <a  class="dashang" onclick="dashangToggle()">赏</a>
 </p>
 
-
-<div class="article_copyright">
-    <p><span class="copy-title">文章标题:</span>顺序图</p>
-    
-    <p><span class="copy-title">本文作者:</span><a  title="Tim wong">Tim wong</a></p>
-    <p><span class="copy-title">发布时间:</span>2019-11-18, 02:11:57</p>
-    <p><span class="copy-title">最后更新:</span>2020-10-19, 12:06:49</p>
-    <span class="copy-title">原始链接:</span><a class="post-url" href="/2019/11/18/test/%E9%A1%BA%E5%BA%8F%E5%9B%BE/" title="顺序图">http://yoursite.com/2019/11/18/test/%E9%A1%BA%E5%BA%8F%E5%9B%BE/</a>
-    <p>
-        <span class="copy-title">版权声明:</span><i class="fa fa-creative-commons"></i> <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/" title="CC BY-NC-SA 4.0 International" target = "_blank">"署名-非商用-相同方式共享 4.0"</a> 转载请保留原文链接及作者。
-    </p>
-</div>
 
 
 
