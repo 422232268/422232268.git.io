@@ -1,633 +1,3029 @@
 <!DOCTYPE html>
-<html>
+
+
+
+  
+
+
+<html class="theme-next mist use-motion" lang="zh">
 <head>
-  <meta charset="utf-8">
-  <title>Tim blog</title>
-  <meta name="keywords" content="">
-  <meta name="description" content="Tim blog">
-    <!--
- * @Author: za-wangxuezhong
- * @Date: 2019-11-17 22:27:10
- * @LastEditors: za-wangxuezhong
- * @LastEditTime: 2019-11-18 00:38:55
- * @Description: file content
- -->
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-<meta name="description" content="个人简介王学忠 目前从事前端开发工作,了解react,vue,koa,webpack.喜欢研究新兴技术和未来发展方向. 最近在空闲的时间研究n2n,希望喜欢网络的朋友一起交流. 联系方式 QQ: 422232268">
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css" />
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=5.1.4">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=5.1.4" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="Hexo, NexT" />
+
+
+
+
+
+  <link rel="alternate" href="/atom.xml" title="随笔集" type="application/atom+xml" />
+
+
+
+
+
+
 <meta property="og:type" content="website">
-<meta property="og:title" content="作者">
-<meta property="og:url" content="http:&#x2F;&#x2F;yoursite.com&#x2F;about&#x2F;index.html">
-<meta property="og:site_name" content="Tim blog">
-<meta property="og:description" content="个人简介王学忠 目前从事前端开发工作,了解react,vue,koa,webpack.喜欢研究新兴技术和未来发展方向. 最近在空闲的时间研究n2n,希望喜欢网络的朋友一起交流. 联系方式 QQ: 422232268">
+<meta property="og:title" content="随笔集">
+<meta property="og:url" content="http:&#x2F;&#x2F;yoursite.com&#x2F;index.html">
+<meta property="og:site_name" content="随笔集">
 <meta property="og:locale" content="zh">
-<meta property="og:updated_time" content="2020-10-19T04:06:49.989Z">
 <meta name="twitter:card" content="summary">
 
 
-<link rel="icon" href="/img/favicon.ico">
 
-<link href="/css/style.css?v=1.0.1" rel="stylesheet">
-
-<link href="/css/hl_theme/gruvbox-dark.css?v=1.0.1" rel="stylesheet">
-
-<link href="//cdn.bootcss.com/animate.css/3.5.2/animate.min.css" rel="stylesheet">
-<link href="//cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
-
-<script src="//cdn.bootcss.com/jquery/2.2.4/jquery.min.js"></script>
-<script src="/js/jquery.autocomplete.min.js?v=1.0.1" ></script>
-
-<script src="//cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
-<script>
-    hljs.initHighlightingOnLoad();
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Mist',
+    version: '5.1.4',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: 'Author'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
 </script>
 
-<script src="//cdn.bootcss.com/nprogress/0.2.0/nprogress.min.js"></script>
+
+
+  <link rel="canonical" href="http://yoursite.com/"/>
 
 
 
-<script src="//cdn.bootcss.com/jquery-cookie/1.4.1/jquery.cookie.min.js" ></script>
 
-<script src="/js/iconfont.js?v=1.0.1" ></script>
 
-<link rel="alternate" href="/atom.xml" title="Tim blog" type="application/atom+xml">
+  <title>随笔集</title>
+  
+
+
+
+
+
+
+
+
 </head>
-<div style="display: none">
-  <input class="theme_disqus_on" value="false">
-  <input class="theme_preload_comment" value="false">
-  <input class="theme_blog_path" value="">
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left 
+  page-home">
+    <div class="headband"></div>
+
+    <a href="https://github.com/422232268" class="github-corner" aria-label="View source on GitHub"><svg width="80" height="80" viewBox="0 0 250 250" style="fill:#151513; color:#fff; position: absolute; top: 0; border: 0; right: 0;" aria-hidden="true"><path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"></path></svg></a><style>.github-corner:hover .octo-arm{animation:octocat-wave 560ms ease-in-out}@keyframes octocat-wave{0%,100%{transform:rotate(0)}20%,60%{transform:rotate(-25deg)}40%,80%{transform:rotate(10deg)}}@media (max-width:500px){.github-corner:hover .octo-arm{animation:none}.github-corner .octo-arm{animation:octocat-wave 560ms ease-in-out}}</style>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">随笔集</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle"></p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
 </div>
 
-<body>
-<aside class="nav mobile">
-    <div class="nav-left">
-        <!--
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-主页">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            主页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-标签">
+          <a href="/tags/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-分类">
+          <a href="/categories/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-归档">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-日程">
+          <a href="/schedule/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-calendar"></i> <br />
+            
+            日程
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-站点地图">
+          <a href="/sitemap.xml" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-sitemap"></i> <br />
+            
+            站点地图
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-公益">
+          <a href="/404/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-heartbeat"></i> <br />
+            
+            公益
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-关于">
+          <a href="/about/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
+            
+            关于
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+  <section id="posts" class="posts-expand">
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/11/20/test/mac%E4%BD%BF%E7%94%A8%E5%B0%8F%E6%8A%80%E5%B7%A7/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Tim wong">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="随笔集">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2019/11/20/test/mac%E4%BD%BF%E7%94%A8%E5%B0%8F%E6%8A%80%E5%B7%A7/" itemprop="url">mac使用小技巧</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-11-20T13:42:17+08:00">
+                2019-11-20
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <!--
  * @Author: za-wangxuezhong
- * @Date: 2019-11-17 22:27:10
+ * @Date: 2019-11-17 22:19:51
  * @LastEditors: za-wangxuezhong
- * @LastEditTime: 2019-11-17 23:12:44
+ * @LastEditTime: 2019-11-20 13:50:39
  * @Description: file content
  -->
-<a href="/" class="avatar_target">
-    <img class="avatar" src="/img/avatar.jpg" />
-</a>
-<div class="author">
-    <span>Tim wong</span>
-</div>
 
-<div class="icon">
-    
-        
-    
-        
-        <a title="github" href="https://github.com/422232268" target="_blank">
-            
-                <svg class="iconfont-svg" aria-hidden="true">
-                    <use xlink:href="#icon-github"></use>
-                </svg>
-            
-        </a>
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-        <a title="email" href="mailto:422232268@qq.com" target="_blank">
-            
-                <svg class="iconfont-svg" aria-hidden="true">
-                    <use xlink:href="#icon-email"></use>
-                </svg>
-            
-        </a>
-        
-    
-        
-        <a title="qq" href="http://wpa.qq.com/msgrd?v=3&uin=422232268&site=qq&menu=yes" target="_blank">
-            
-                <svg class="iconfont-svg" aria-hidden="true">
-                    <use xlink:href="#icon-qq"></use>
-                </svg>
-            
-        </a>
-        
-    
-        
-        <a title="kugou" href="https://www.kugou.com/" target="_blank">
-            
-                <svg class="iconfont-svg" aria-hidden="true">
-                    <use xlink:href="#icon-kugou"></use>
-                </svg>
-            
-        </a>
-        
-    
-        
-    
-</div>
-
-
-
-
-<ul>
-    <li><div class="all active">全部文章<small>(10)</small></div></li>
-    
-        
-            
-            <li><div data-rel="React">React<small>(2)</small></div>
-                
-            </li>
-            
-        
-    
-        
-            
-            <li><div data-rel="web">web<small>(5)</small></div>
-                
-            </li>
-            
-        
-    
+<h2 id="mac使用小技巧"><a href="#mac使用小技巧" class="headerlink" title="mac使用小技巧"></a>mac使用小技巧</h2><h3 id="更改终端用户名"><a href="#更改终端用户名" class="headerlink" title="更改终端用户名"></a>更改终端用户名</h3><ul>
+<li><p>/etc/bashrc文件中的PS1=’\h:\W \u$ ‘，其中\h代表主机名，\u代表用户名<br>例如:</p>
+</li>
+<li><p>比如修改成：PS1=’abc:\W 123$ ‘ ， 终端显示如下:<a href="https://www.cnblogs.com/tdcqma/p/6714492.html">地址</a></p>
+</li>
 </ul>
-<div class="left-bottom">
-    <div class="menus">
-    
-    
-    
-    
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/kity@2.0.4/dist/kity.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/kityminder-core@1.4.50/dist/kityminder.core.min.js"></script><script defer="true" type="text/javascript" src="https://cdn.jsdelivr.net/npm/hexo-simple-mindmap@0.2.0/dist/mindmap.min.js"></script><link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/hexo-simple-mindmap@0.2.0/dist/mindmap.min.css">
+          
+        
+      
     </div>
-    <div><a class="about  hasFriend  site_url"  href="/about">关于</a><a style="width: 50%"  class="friends">友链</a></div>
-</div>
-<input type="hidden" id="yelog_site_posts_number" value="10">
+    
+    
+    
 
-<div style="display: none">
-    <span id="busuanzi_value_site_uv"></span>
-    <span id="busuanzi_value_site_pv"></span>
-</div>
+    
 
+    
+
+    
+
+    <div>
+    
     </div>
-    <div class="nav-right">
-        <div class="friends-area">
-    <div class="friends-title">
-        友情链接
-        <i class="back-title-list"></i>
-    </div>
-    <div class="friends-content">
-        <ul>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/11/17/test/hello-world/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Tim wong">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="随笔集">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2019/11/17/test/hello-world/" itemprop="url">Hello World</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
             
-            <li><a target="_blank" href="http://yelog.org/">叶落阁</a></li>
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-11-17T22:19:51+08:00">
+                2019-11-17
+              </time>
             
-        </ul>
-    </div>
-</div>
-        <div class="title-list">
-    <form onkeydown="if(event.keyCode==13){return false;}">
-        <input class="search" type="text" placeholder="Search..." autocomplete="off"id="local-search-input" >
-        <i class="cross"></i>
-        <span>
-            <label for="tagswitch">Tags:</label>
-            <input id="tagswitch" type="checkbox" style="display: none" />
-            <i id="tagsWitchIcon"></i>
-        </span>
-    </form>
-    <div class="tags-list">
-    
-    <li class="article-tag-list-item">
-        <a class="color1">frist</a>
-    </li>
-    
-    <div class="clearfix"></div>
-</div>
 
-    
-    <nav id="title-list-nav">
-        
-        <a id="top" class=""
-           href="/2019/11/20/test/mac%E4%BD%BF%E7%94%A8%E5%B0%8F%E6%8A%80%E5%B7%A7/"
-           data-tag=""
-           data-author="" >
-            <span class="post-title" title="mac使用小技巧">mac使用小技巧</span>
-            <span class="post-date" title="2019-11-20 13:42:17">2019/11/20</span>
-        </a>
-        
-        <a id="top" class=""
-           href="/2019/11/17/test/hello-world/"
-           data-tag=""
-           data-author="" >
-            <span class="post-title" title="Hello World">Hello World</span>
-            <span class="post-date" title="2019-11-17 22:19:51">2019/11/17</span>
-        </a>
-        
-        <a  class="React "
-           href="/2019/11/18/test/test/"
-           data-tag=""
-           data-author="" >
-            <span class="post-title" title="彻底搞懂ReactHooks的原理和实现">彻底搞懂ReactHooks的原理和实现</span>
-            <span class="post-date" title="2019-11-18 13:29:22">2019/11/18</span>
-        </a>
-        
-        <a  class="React "
-           href="/2019/11/18/test/%E5%BD%BB%E5%BA%95%E6%90%9E%E6%87%82ReactHooks%E7%9A%84%E5%8E%9F%E7%90%86%E5%92%8C%E5%AE%9E%E7%8E%B0/"
-           data-tag=""
-           data-author="" >
-            <span class="post-title" title="彻底搞懂ReactHooks的原理和实现">彻底搞懂ReactHooks的原理和实现</span>
-            <span class="post-date" title="2019-11-18 13:29:22">2019/11/18</span>
-        </a>
-        
-        <a  class="web "
-           href="/2019/11/18/test/%E5%9B%BE%E6%A0%87%E5%AD%A6%E4%B9%A0%E4%BA%8C%20copy%202/"
-           data-tag="frist"
-           data-author="" >
-            <span class="post-title" title="第四篇笔记">第四篇笔记</span>
-            <span class="post-date" title="2019-11-18 02:11:57">2019/11/18</span>
-        </a>
-        
-        <a  class="web "
-           href="/2019/11/18/test/%E7%B1%BB%E5%9B%BE/"
-           data-tag="frist"
-           data-author="" >
-            <span class="post-title" title="类图">类图</span>
-            <span class="post-date" title="2019-11-18 02:11:57">2019/11/18</span>
-        </a>
-        
-        <a  class="web "
-           href="/2019/11/18/test/%E9%A1%BA%E5%BA%8F%E5%9B%BE/"
-           data-tag="frist"
-           data-author="" >
-            <span class="post-title" title="顺序图">顺序图</span>
-            <span class="post-date" title="2019-11-18 02:11:57">2019/11/18</span>
-        </a>
-        
-        <a  class="web "
-           href="/2019/11/18/test/%E6%B5%81%E7%A8%8B%E5%9B%BE/"
-           data-tag="frist"
-           data-author="" >
-            <span class="post-title" title="流程图">流程图</span>
-            <span class="post-date" title="2019-11-18 01:19:51">2019/11/18</span>
-        </a>
-        
-        <a  class="web "
-           href="/2019/11/18/test/%E5%9B%BE%E8%A1%A8%E7%A4%BA%E4%BE%8B%E4%BB%A3%E7%A0%81/"
-           data-tag="frist"
-           data-author="" >
-            <span class="post-title" title="图表示例代码">图表示例代码</span>
-            <span class="post-date" title="2019-11-18 00:19:51">2019/11/18</span>
-        </a>
-        
-        <a  class=""
-           href="/2019/11/17/test/%E4%B8%BA%E4%BB%80%E4%B9%88%E7%94%A8axios%E4%B8%8D%E7%94%A8ajax/"
-           data-tag=""
-           data-author="" >
-            <span class="post-title" title="为什么用axios不用ajax">为什么用axios不用ajax</span>
-            <span class="post-date" title="2019-11-17 22:19:51">2019/11/17</span>
-        </a>
-        
-    </nav>
-</div>
-    </div>
-    <div class="hide-list">
-        <div class="semicircle">
-            <div class="brackets first"><</div>
-            <div class="brackets">&gt;</div>
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
         </div>
-    </div>
-</aside>
-<div class="post index">
-    <div class="pjax">
-        <article class="index">
-            <div class="toc-ref">
+      </header>
     
-        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Why-Blog"><span class="toc-text">Why Blog</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#对博客的理解"><span class="toc-text">对博客的理解</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#关于"><span class="toc-text">关于</span></a></li></ol></li></ol>
+
     
-<style>
-    .left-col .switch-btn,
-    .left-col .switch-area {
-        display: none;
-    }
-    .toc-level-3 i,
-    .toc-level-3 ol {
-        display: none !important;
-    }
-</style>
-</div>
-            <h1 id="Why-Blog"><a href="#Why-Blog" class="headerlink" title="Why Blog"></a>Why Blog</h1><h2 id="对博客的理解"><a href="#对博客的理解" class="headerlink" title="对博客的理解"></a>对博客的理解</h2><p>喜欢写Blog的人，会经历三个阶段。</p>
-<blockquote>
-<p>第一阶段，刚接触Blog，觉得很新鲜，试着选择一个免费空间来写。</p>
-</blockquote>
-<blockquote>
-<p>第二阶段，发现免费空间限制太多，就自己购买域名和空间，搭建独立博客。</p>
-</blockquote>
-<blockquote>
-<p>第三阶段，觉得独立博客的管理太麻烦，最好在保留控制权的前提下，让别人来管，自己只负责写文章。</p>
-</blockquote>
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
 <!--
- * @Autor: za-wangxuezhong
- * @Date: 2020-10-19 12:06:49
+ * @Author: za-wangxuezhong
+ * @Date: 2019-11-17 22:19:51
  * @LastEditors: za-wangxuezhong
- * @LastEditTime: 2020-10-19 12:08:02
+ * @LastEditTime: 2019-11-18 01:56:24
+ * @Description: file content
+ -->
+
+<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><pre><code class="bash">hexo new &quot;My New Post&quot;</code></pre>
+<p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p>
+<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><pre><code class="bash">hexo server</code></pre>
+<p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p>
+<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><pre><code class="bash">hexo generate</code></pre>
+<p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p>
+<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><pre><code class="bash">hexo deploy</code></pre>
+<p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/kity@2.0.4/dist/kity.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/kityminder-core@1.4.50/dist/kityminder.core.min.js"></script><script defer="true" type="text/javascript" src="https://cdn.jsdelivr.net/npm/hexo-simple-mindmap@0.2.0/dist/mindmap.min.js"></script><link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/hexo-simple-mindmap@0.2.0/dist/mindmap.min.css">
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <div>
+    
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/11/18/test/test/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Tim wong">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="随笔集">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2019/11/18/test/test/" itemprop="url">test</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-11-18T13:29:22+08:00">
+                2019-11-18
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/React/" itemprop="url" rel="index">
+                    <span itemprop="name">React</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h3 id="摘要"><a href="#摘要" class="headerlink" title="摘要"></a>摘要</h3><!--
+ * @Autor: za-wangxuezhong
+ * @Date: 2020-10-19 15:05:51
+ * @LastEditors: za-wangxuezhong
+ * @LastEditTime: 2020-12-12 03:41:28
  * @Description:
  * @ToDo:
  * @JiraID: SOMPO-
 -->
-<p>我们每个人的在网络上产生的数据越来越多，这些信息是我们在互联网上存在过的痕迹，值得我们认真对待。但是它们被分散分布在各个网站上。很多时候我们很难将它们聚合在一起，而且各个网站的信息排布方式也没有办法自由控制，所以我们需要一个可以由自己主宰的空间——博客。</p>
-<p>通过博客，我们可以记录自己的生活和成长的轨迹。它不像 Twitter 那样碎片化，也不像 Facebook 那样关系化，它是私人的空间。</p>
-<h2 id="关于"><a href="#关于" class="headerlink" title="关于"></a>关于</h2><p><strong>叶落阁</strong> 是胖胖（王学忠）的个人站。</p>
-<p>到目前为止已经写了<code class="article_number"></code>篇文章， 共<code class="site_word_count"></code>字。</p>
-<p>本站访问人数：<code class="site_uv"></code>人次 ， 访问量：<code class="site_pv"></code>次</p>
-<p>主要功能：</p>
-<ul>
-<li>搜索支持文章标题、标签(#标签)、作者(@作者)</li>
-<li>pad/手机等移动端适配</li>
-<li>页面全局快捷键 <a href='http://yelog.org/2017/03/24/3-hexo-shortcuts/'>3-hexo快捷键说明</a></li>
+<h4 id="当使用Hook特性编写组件的时候-总能感觉到它的简洁和方便-当然-天下没有-免费的午餐-它牺牲了可读性并且存在内存泄漏风险-但这并不妨碍探索它的能力"><a href="#当使用Hook特性编写组件的时候-总能感觉到它的简洁和方便-当然-天下没有-免费的午餐-它牺牲了可读性并且存在内存泄漏风险-但这并不妨碍探索它的能力" class="headerlink" title="当使用Hook特性编写组件的时候,总能感觉到它的简洁和方便.当然,天下没有{免费的午餐},它牺牲了可读性并且存在内存泄漏风险,但这并不妨碍探索它的能力"></a>当使用Hook特性编写组件的时候,总能感觉到它的简洁和方便.当然,天下没有{免费的午餐},它牺牲了可读性并且存在内存泄漏风险,但这并不妨碍探索它的能力</h4><div id="flowchart-0" class="flow-chart"></div>
+<blockquote class="pullquote mindmap mindmap-md"><ul>
+<li><a href="https://hunterx.xyz/hexo-simple-mindmap-plugin-intro.html">Hexo 的思维导图插件</a><ul>
+<li>前言</li>
+<li>使用方法<ul>
+<li>一</li>
+<li>二</li>
+<li>三<ul>
+<li>四</li>
 </ul>
+</li>
+</ul>
+</li>
+<li>太长不看</li>
+<li>参考资料</li>
+</ul>
+</li>
+</ul>
+</blockquote>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/raphael/2.2.7/raphael.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/flowchart/1.6.5/flowchart.min.js"></script><textarea id="flowchart-0-code" style="display: none">st=>start: 开始
+e=>end: 结束
+op=>operation: 我的操作
+cond=>condition: 确认？
 
-        </article>
+st->op->cond
+cond(yes)->e
+cond(no)->op</textarea><textarea id="flowchart-0-options" style="display: none">{"scale":1,"line-width":2,"line-length":50,"text-margin":10,"font-size":12}</textarea><script>  var code = document.getElementById("flowchart-0-code").value;  var options = JSON.parse(decodeURIComponent(document.getElementById("flowchart-0-options").value));  var diagram = flowchart.parse(code);  diagram.drawSVG("flowchart-0", options);</script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/kity@2.0.4/dist/kity.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/kityminder-core@1.4.50/dist/kityminder.core.min.js"></script><script defer="true" type="text/javascript" src="https://cdn.jsdelivr.net/npm/hexo-simple-mindmap@0.2.0/dist/mindmap.min.js"></script><link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/hexo-simple-mindmap@0.2.0/dist/mindmap.min.css">
+          
         
-        <p>
-            <a  class="dashang" onclick="dashangToggle()">赏</a>
-        </p>
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <div>
+    
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/11/18/test/%E5%BD%BB%E5%BA%95%E6%90%9E%E6%87%82ReactHooks%E7%9A%84%E5%8E%9F%E7%90%86%E5%92%8C%E5%AE%9E%E7%8E%B0/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Tim wong">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="随笔集">
+    </span>
+
+    
+      <header class="post-header">
+
         
         
-    </div>
-    <div class="copyright">
-        <p class="footer-entry">©2016-2019 wxz</p>
-<p class="footer-entry">Built with <a href="https://hexo.io/" target="_blank">Hexo</a> and <a href="https://github.com/yelog/hexo-theme-3-hexo" target="_blank">3-hexo</a> theme</p>
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2019/11/18/test/%E5%BD%BB%E5%BA%95%E6%90%9E%E6%87%82ReactHooks%E7%9A%84%E5%8E%9F%E7%90%86%E5%92%8C%E5%AE%9E%E7%8E%B0/" itemprop="url">彻底搞懂ReactHooks的原理和实现</a></h1>
+        
 
-    </div>
-    <div class="full-toc">
-        <button class="full"><span class="min "></span></button>
-<button class="post-toc-menu"><span class="post-toc-menu-icons"></span></button>
-<div class="post-toc"><span class="post-toc-title">目录</span>
-    <div class="post-toc-content">
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-11-18T13:29:22+08:00">
+                2019-11-18
+              </time>
+            
 
-    </div>
-</div>
-<a class="" id="rocket" ></a>
+            
 
-    </div>
-</div>
-<div class="acParent"></div>
+            
+          </span>
 
-<div class="hide_box" onclick="dashangToggle()"></div>
-<div class="shang_box">
-    <a class="shang_close"  onclick="dashangToggle()">×</a>
-    <div class="shang_tit">
-        <p>喜欢就点赞,疼爱就打赏</p>
-    </div>
-    <div class="shang_payimg">
-        <div class="pay_img">
-            <img src="/img/alipay.jpg" class="alipay" title="扫码支持">
-            <img src="/img/weixin.jpg" class="weixin" title="扫码支持">
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/React/" itemprop="url" rel="index">
+                    <span itemprop="name">React</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
         </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h3 id="摘要"><a href="#摘要" class="headerlink" title="摘要"></a>摘要</h3><h4 id="当使用Hook特性编写组件的时候-总能感觉到它的简洁和方便-当然-天下没有-免费的午餐-它牺牲了可读性并且存在内存泄漏风险-但这并不妨碍探索它的能力"><a href="#当使用Hook特性编写组件的时候-总能感觉到它的简洁和方便-当然-天下没有-免费的午餐-它牺牲了可读性并且存在内存泄漏风险-但这并不妨碍探索它的能力" class="headerlink" title="当使用Hook特性编写组件的时候,总能感觉到它的简洁和方便.当然,天下没有{免费的午餐},它牺牲了可读性并且存在内存泄漏风险,但这并不妨碍探索它的能力"></a>当使用Hook特性编写组件的时候,总能感觉到它的简洁和方便.当然,天下没有{免费的午餐},它牺牲了可读性并且存在内存泄漏风险,但这并不妨碍探索它的能力</h4><h4 id="在正式开始前-我打算先提出几个问题-这些问题会在源码实现的过程中-逐步解决"><a href="#在正式开始前-我打算先提出几个问题-这些问题会在源码实现的过程中-逐步解决" class="headerlink" title="在正式开始前,我打算先提出几个问题,这些问题会在源码实现的过程中,逐步解决"></a>在正式开始前,我打算先提出几个问题,这些问题会在源码实现的过程中,逐步解决</h4><ul>
+<li>useState 的实现原理</li>
+<li>为什么不能在循环、判断内部使用Hook</li>
+<li>useEffect的实现原理</li>
+<li>useEffect的应用场景</li>
+<li><code>Class</code> vs <code>Hooks</code></li>
+</ul>
+<h4 id="以上代码均由TypeScript来实现-文中全部dome均在github中实现"><a href="#以上代码均由TypeScript来实现-文中全部dome均在github中实现" class="headerlink" title="以上代码均由TypeScript来实现,文中全部dome均在github中实现"></a>以上代码均由TypeScript来实现,文中全部dome均在<a href="gist.github.com/dongyuanxin/">github</a>中实现</h4><details>
+  <summary><mark><font color=darkred>点击查看详细内容</font></mark></summary>
+  <p> - 测试 测试测试</p>
+  <pre><code>
+for i in a:
+    print(i)
+  </code></pre>
+</details>
+### useState的实现原理
+
+<ul>
+<li>当调用useState的时候,回返回形如<code>(变量,函数)</code>的一个组件.并且state的初始值就是外部调用useState的时候传入的参数</li>
+<li>理清楚了传参和返回值,再来看下useState还做了些什么.正如下面的代码所示,当点击按钮的时候,执行setNum.状态num被更新,并且UI识图更新.显然,useState翻的用于更改状态的函数,自动调用了<code>render</code> 方法来触发视图更新</li>
+</ul>
+<pre><code class="React">function App() {
+  const [num, setNum] = useState &lt; number &gt; 0;
+
+  return (
+    &lt;div&gt;
+      &lt;div&gt;num: {num}&lt;/div&gt;
+      &lt;button onClick={() =&gt; setNum(num + 1)}&gt;加 1&lt;/button&gt;
+    &lt;/div&gt;
+  );
+}</code></pre>
+<ul>
+<li>有了上面的实验,借助一下闭包,封装一个setState如下:</li>
+</ul>
+<pre><code class="React">function render() {
+  ReactDOM.render(&lt;App /&gt;, document.getElementById(&quot;root&quot;));
+}
+
+let state: any;
+
+function useState&lt;T&gt;(initialState: T): [T, (newState: T) =&gt; void] {
+  state = state || initialState;
+
+  function setState(newState: T) {
+    state = newState;
+    render();
+  }
+
+  return [state, setState];
+}
+
+render(); // 首次渲染</code></pre>
+<ul>
+<li>这是一个简易能用的useState雏形,它也解决了文章开始提到的{useState的实现原理}这个问题,但如果在函数内生命多个state,在当前代码中,只有第一个state 是生效的(请看state=state||initialState)</li>
+</ul>
+<h3 id="为什么不能在循环、判断内部使用Hook"><a href="#为什么不能在循环、判断内部使用Hook" class="headerlink" title="为什么不能在循环、判断内部使用Hook"></a>为什么不能在循环、判断内部使用Hook</h3><ul>
+<li>先不要考虑题目提及的问题.思路还是回到如何让useState支持多个state.React Hook 看起来非常 Magic 的实现，本质上还是通过 Array 来实现的</li>
+<li>前面 useState 的简单实现里，初始的状态是保存在一个全局变量中的。以此类推，多个状态，应该是保存在一个专门的全局容器中。这个容器，就是一个朴实无华的 Array 对象。具体过程如下：</li>
+</ul>
+<ol>
+<li>第一次渲染时候，根据 useState 顺序，逐个声明 state 并且将其放入全局 Array 中。每次声明 state，都要将 cursor 增加 1。</li>
+<li>更新 state，触发再次渲染的时候。cursor 被重置为 0。按照 useState 的声明顺序，依次拿出最新的 state 的值，视图更新。</li>
+</ol>
+<ul>
+<li>请看下面这张图，每次使用 useState，都会向 STATE 容器中添加新的状态。</li>
+</ul>
+<pre><code class="React">import React from &quot;react&quot;;
+import ReactDOM from &quot;react-dom&quot;;
+
+const states: any[] = [];
+let cursor: number = 0;
+
+function useState&lt;T&gt;(initialState: T): [T, (newState: T) =&gt; void] {
+  const currenCursor = cursor;
+  states[currenCursor] = states[currenCursor] || initialState; // 检查是否渲染过
+
+  function setState(newState: T) {
+    states[currenCursor] = newState;
+    render();
+  }
+
+  ++cursor; // update: cursor
+  return [states[currenCursor], setState];
+}
+
+function App() {
+  const [num, setNum] = useState &lt; number &gt; 0;
+  const [num2, setNum2] = useState &lt; number &gt; 1;
+
+  return (
+    &lt;div&gt;
+      &lt;div&gt;num: {num}&lt;/div&gt;
+      &lt;div&gt;
+        &lt;button onClick={() =&gt; setNum(num + 1)}&gt;加 1&lt;/button&gt;
+        &lt;button onClick={() =&gt; setNum(num - 1)}&gt;减 1&lt;/button&gt;
+      &lt;/div&gt;
+      &lt;hr /&gt;
+      &lt;div&gt;num2: {num2}&lt;/div&gt;
+      &lt;div&gt;
+        &lt;button onClick={() =&gt; setNum2(num2 * 2)}&gt;扩大一倍&lt;/button&gt;
+        &lt;button onClick={() =&gt; setNum2(num2 / 2)}&gt;缩小一倍&lt;/button&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  );
+}
+
+function render() {
+  ReactDOM.render(&lt;App /&gt;, document.getElementById(&quot;root&quot;));
+  cursor = 0; // 重置cursor
+}
+
+render(); // 首次渲染
+</code></pre>
+<ul>
+<li>此时，如果想在循环、判断等不在函数组件顶部的地方使用 Hook，如下所示：</li>
+</ul>
+<pre><code class="React">let tag = true;
+
+function App() {
+  const [num, setNum] = useState &lt; number &gt; 0;
+
+  // 只有初次渲染，才执行
+  if (tag) {
+    const [unusedNum] = useState &lt; number &gt; 1;
+    tag = false;
+  }
+
+  const [num2, setNum2] = useState &lt; number &gt; 2;
+
+  return (
+    &lt;div&gt;
+      &lt;div&gt;num: {num}&lt;/div&gt;
+      &lt;div&gt;
+        &lt;button onClick={() =&gt; setNum(num + 1)}&gt;加 1&lt;/button&gt;
+        &lt;button onClick={() =&gt; setNum(num - 1)}&gt;减 1&lt;/button&gt;
+      &lt;/div&gt;
+      &lt;hr /&gt;
+      &lt;div&gt;num2: {num2}&lt;/div&gt;
+      &lt;div&gt;
+        &lt;button onClick={() =&gt; setNum2(num2 * 2)}&gt;扩大一倍&lt;/button&gt;
+        &lt;button onClick={() =&gt; setNum2(num2 / 2)}&gt;缩小一倍&lt;/button&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  );
+}</code></pre>
+<ul>
+<li>由于在条件判断的逻辑中，重置了tag=false，因此此后的渲染不会再进入条件判断语句。看起来好像没有问题？但是，由于 useState 是基于 Array+Cursor 来实现的，第一次渲染时候，state 和 cursor 的对应关系如下表</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>变量名</th>
+<th>Cursor</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>num</td>
+<td>0</td>
+</tr>
+<tr>
+<td>unusedNum</td>
+<td>1</td>
+</tr>
+<tr>
+<td>num2</td>
+<td>2</td>
+</tr>
+</tbody></table>
+<ul>
+<li>当点击事件触发再次渲染，并不会进入条件判断中的 useState。所以，cursor=2 的时候对应的变量是 num2。而其实 num2 对应的 cursor 应该是 3。就会导致setNum2并不起作用</li>
+<li>当点击事件触发再次渲染，并不会进入条件判断中的 useState。所以，cursor=2 的时候对应的变量是 num2。而其实 num2 对应的 cursor 应该是 3。就会导致setNum2并不起作用</li>
+</ul>
+<h3 id="useEffect-的实现原理"><a href="#useEffect-的实现原理" class="headerlink" title="useEffect 的实现原理"></a>useEffect 的实现原理</h3><ul>
+<li>在探索 useEffect 原理的时候，一直被一个问题困扰：useEffect 作用和用途是什么？当然，用于函数的副作用这句话谁都会讲。举个例子吧</li>
+</ul>
+<pre><code class="React">function App() {
+  const [num, setNum] = useState(0);
+
+  useEffect(() =&gt; {
+    // 模拟异步请求后端数据
+    setTimeout(() =&gt; {
+      setNum(num + 1);
+    }, 1000);
+  }, []);
+
+  return &lt;div&gt;{!num ? &quot;请求后端数据...&quot; : `后端数据是 ${num}`}&lt;/div&gt;;
+}</code></pre>
+<ul>
+<li>这段代码，虽然这样组织可读性更高，毕竟可以将这个请求理解为函数的副作用。但这并不是必要的。完全可以不使用useEffect，直接使用setTimeout，并且它的回调函数中更新函数组件的 state</li>
+<li>在阅读A Complete Guide to useEffect和构建你自己的 Hooks之后，我才理解 useEffect 的存在的必要性和意义</li>
+<li>在 useEffect 的第二个参数中，我们可以指定一个数组，如果下次渲染时，数组中的元素没变，那么就不会触发这个副作用（可以类比 Class 类的关于 nextprops 和 prevProps 的生命周期）。好处显然易见，相比于直接裸写在函数组件顶层，useEffect 能根据需要，避免多余的 render</li>
+<li>下面是一个不包括销毁副作用功能的 useEffect 的 TypeScript 实现</li>
+</ul>
+<pre><code class="React">// 还是利用 Array + Cursor的思路
+const allDeps: any[][] = [];
+let effectCursor: number = 0;
+
+function useEffect(callback: () =&gt; void, deps: any[]) {
+  if (!allDeps[effectCursor]) {
+    // 初次渲染：赋值 + 调用回调函数
+    allDeps[effectCursor] = deps;
+    ++effectCursor;
+    callback();
+    return;
+  }
+
+  const currenEffectCursor = effectCursor;
+  const rawDeps = allDeps[currenEffectCursor];
+  // 检测依赖项是否发生变化，发生变化需要重新render
+  const isChanged = rawDeps.some(
+    (dep: any, index: number) =&gt; dep !== deps[index]
+  );
+  if (isChanged) {
+    callback();
+  }
+  ++effectCursor;
+}
+
+function render() {
+  ReactDOM.render(&lt;App /&gt;, document.getElementById(&quot;root&quot;));
+  effectCursor = 0; // 注意将 effectCursor 重置为0
+}</code></pre>
+<ul>
+<li>对于 useEffect 的实现，配合下面案例的使用会更容易理解。当然，你也可以在这个 useEffect 中发起异步请求，并在接受数据后，调用 state 的更新函数，不会发生爆栈的情况</li>
+</ul>
+<pre><code class="React">function App() {
+  const [num, setNum] = useState &lt; number &gt; 0;
+  const [num2] = useState &lt; number &gt; 1;
+
+  // 多次触发
+  // 每次点击按钮，都会触发 setNum 函数
+  // 副作用检测到 num 变化，会自动调用回调函数
+  useEffect(() =&gt; {
+    console.log(&quot;num update: &quot;, num);
+  }, [num]);
+
+  // 仅第一次触发
+  // 只会在compoentDidMount时，触发一次
+  // 副作用函数不会多次执行
+  useEffect(() =&gt; {
+    console.log(&quot;num2 update: &quot;, num2);
+  }, [num2]);
+
+  return (
+    &lt;div&gt;
+      &lt;div&gt;num: {num}&lt;/div&gt;
+      &lt;div&gt;
+        &lt;button onClick={() =&gt; setNum(num + 1)}&gt;加 1&lt;/button&gt;
+        &lt;button onClick={() =&gt; setNum(num - 1)}&gt;减 1&lt;/button&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  );
+}</code></pre>
+<ul>
+<li>useEffect 第一个回调函数可以返回一个用于销毁副作用的函数，相当于 Class 组件的 unmount 生命周期。这里为了方便说明，没有进行实现</li>
+<li>在这一小节中，尝试解答了 「🤔️ useEffect 的实现原理」和 「🤔️ useEffect 的应用场景」这两个问题</li>
+</ul>
+<h3 id="Class-VS-Hooks"><a href="#Class-VS-Hooks" class="headerlink" title="Class VS Hooks"></a>Class VS Hooks</h3><ul>
+<li>虽然 Hooks 看起来更酷炫，更简洁。但是在实际开发中我更倾向于使用 Class 来声明组件。两种方法的对比如下</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>Class</th>
+<th>Hooks</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>代码逻辑清晰（构造函数、componentDidMount 等）</td>
+<td>需要配合变量名和注释</td>
+</tr>
+<tr>
+<td>不容易内存泄漏</td>
+<td>容易发生内存泄漏</td>
+</tr>
+</tbody></table>
+<ul>
+<li>总的来说，Hooks 对代码编写的要求较高，在没有有效机制保证代码可读性、规避风险的情况下，Class 依然是我的首选。关于内存泄漏，下面是一个例子（目前还没找到方法规避这种向全局传递状态更新函数的做法</li>
+</ul>
+<pre><code class="React">import React, { useState } from &quot;react&quot;;
+import ReactDOM from &quot;react-dom&quot;;
+
+let func: any;
+setInterval(() =&gt; {
+  typeof func === &quot;function&quot; &amp;&amp; func(Date.now());
+  console.log(&quot;interval&quot;);
+}, 1000);
+
+function App() {
+  const [num, setNum] = useState &lt; number &gt; 0;
+  if (typeof func !== &quot;function&quot;) {
+    func = setNum;
+  }
+  return &lt;div&gt;{num}&lt;/div&gt;;
+}
+
+function render() {
+  ReactDOM.render(&lt;App /&gt;, document.getElementById(&quot;root&quot;));
+}
+
+render();</code></pre>
+<h3 id="参考链接"><a href="#参考链接" class="headerlink" title="参考链接"></a>参考链接</h3><p><a href="https://xin-tan.com/passages/2019-10-21-react-hooks/#%E6%91%98%E8%A6%81">ReactHooks的原理和实现</a><br><a href="https://overreacted.io/zh-hans/a-complete-guide-to-useeffect/">useEffect 完整指南</a><br><a href="https://github.com/brickspert/blog/issues/26">React Hooks 原理</a></p>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/kity@2.0.4/dist/kity.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/kityminder-core@1.4.50/dist/kityminder.core.min.js"></script><script defer="true" type="text/javascript" src="https://cdn.jsdelivr.net/npm/hexo-simple-mindmap@0.2.0/dist/mindmap.min.js"></script><link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/hexo-simple-mindmap@0.2.0/dist/mindmap.min.css">
+          
+        
+      
     </div>
-    <div class="shang_payselect">
-        <span><label><input type="radio" name="pay" checked value="alipay">支付宝</label></span><span><label><input type="radio" name="pay" value="weixin">微信</label></span>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <div>
+    
     </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/11/18/test/%E5%9B%BE%E6%A0%87%E5%AD%A6%E4%B9%A0%E4%BA%8C%20copy%202/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Tim wong">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="随笔集">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2019/11/18/test/%E5%9B%BE%E6%A0%87%E5%AD%A6%E4%B9%A0%E4%BA%8C%20copy%202/" itemprop="url">第四篇笔记</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-11-18T02:11:57+08:00">
+                2019-11-18
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/web/" itemprop="url" rel="index">
+                    <span itemprop="name">web</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <!--
+ * @Author: za-wangxuezhong
+ * @Date: 2019-11-17 22:19:51
+ * @LastEditors: za-wangxuezhong
+ * @LastEditTime: 2019-11-20 13:01:34
+ * @Description: file content
+ -->
+
+<h2 id="流程图-基本语法"><a href="#流程图-基本语法" class="headerlink" title="流程图-基本语法"></a>流程图-基本语法</h2><h3 id="这声明了一个从上到下（TD或TB）定向的图形"><a href="#这声明了一个从上到下（TD或TB）定向的图形" class="headerlink" title="这声明了一个从上到下（TD或TB）定向的图形"></a>这声明了一个从上到下（TD或TB）定向的图形</h3><pre><code class="bash">graph TD
+    Start --&gt; Stop
+</code></pre>
+<pre><code class="mermaid">graph TD
+    Start --&gt; Stop</code></pre>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/kity@2.0.4/dist/kity.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/kityminder-core@1.4.50/dist/kityminder.core.min.js"></script><script defer="true" type="text/javascript" src="https://cdn.jsdelivr.net/npm/hexo-simple-mindmap@0.2.0/dist/mindmap.min.js"></script><link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/hexo-simple-mindmap@0.2.0/dist/mindmap.min.css">
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <div>
+    
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/11/18/test/%E7%B1%BB%E5%9B%BE/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Tim wong">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="随笔集">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2019/11/18/test/%E7%B1%BB%E5%9B%BE/" itemprop="url">类图</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-11-18T02:11:57+08:00">
+                2019-11-18
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/web/" itemprop="url" rel="index">
+                    <span itemprop="name">web</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <!--
+ * @Author: za-wangxuezhong
+ * @Date: 2019-11-17 22:19:51
+ * @LastEditors: za-wangxuezhong
+ * @LastEditTime: 2019-11-21 09:20:26
+ * @Description: file content
+ -->
+
+<h2 id="类图-基本语法"><a href="#类图-基本语法" class="headerlink" title="类图-基本语法"></a>类图-基本语法</h2><blockquote>
+<p>“在软件工程中，统一建模语言（UML）中的类图是一种静态结构图，它通过显示系统的类，其属性，操作（或方法）以及对象之间的关系来描述系统的结构。 ”。维基百科</p>
+</blockquote>
+<p>类图是面向对象建模的主要构建块。它用于应用程序结构的一般概念建模，以及用于将模型转换为编程代码的详细建模。类图也可以用于数据建模。类图中的类表示主要元素，应用程序中的交互以及要编程的类。</p>
+<h3 id="美人鱼可以渲染类图"><a href="#美人鱼可以渲染类图" class="headerlink" title="美人鱼可以渲染类图"></a>美人鱼可以渲染类图</h3><pre><code class="bash"> classDiagram
+      Animal &lt;|-- Duck
+      Animal &lt;|-- Fish
+      Animal &lt;|-- Zebra
+      Animal : +int age
+      Animal : +String gender
+      Animal: +isMammal()
+      Animal: +mate()
+      class Duck{
+          +String beakColor
+          +swim()
+          +quack()
+      }
+      class Fish{
+          -int sizeInFeet
+          -canEat()
+      }
+      class Zebra{
+          +bool is_wild
+          +run()
+      }
+</code></pre>
+<pre class="mermaid"> classDiagram
+      Animal <|-- Duck
+      Animal <|-- Fish
+      Animal <|-- Zebra
+      Animal : +int age
+      Animal : +String gender
+      Animal: +isMammal()
+      Animal: +mate()
+      class Duck{
+          +String beakColor
+          +swim()
+          +quack()
+      }
+      class Fish{
+          -int sizeInFeet
+          -canEat()
+      }
+      class Zebra{
+          +bool is_wild
+          +run()
+      }</pre>
+
+<h3 id="饼图"><a href="#饼图" class="headerlink" title="饼图"></a>饼图</h3><pre><code class="bash">pie
+    &quot;Dogs&quot; : 386
+    &quot;Cats&quot; : 85
+    &quot;Rats&quot; : 15
+</code></pre>
+<pre class="mermaid">pie
+    "Dogs" : 386
+    "Cats" : 85
+    "Rats" : 15</pre>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/kity@2.0.4/dist/kity.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/kityminder-core@1.4.50/dist/kityminder.core.min.js"></script><script defer="true" type="text/javascript" src="https://cdn.jsdelivr.net/npm/hexo-simple-mindmap@0.2.0/dist/mindmap.min.js"></script><link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/hexo-simple-mindmap@0.2.0/dist/mindmap.min.css">
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <div>
+    
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/11/18/test/%E9%A1%BA%E5%BA%8F%E5%9B%BE/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Tim wong">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="随笔集">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2019/11/18/test/%E9%A1%BA%E5%BA%8F%E5%9B%BE/" itemprop="url">顺序图</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-11-18T02:11:57+08:00">
+                2019-11-18
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/web/" itemprop="url" rel="index">
+                    <span itemprop="name">web</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <!--
+ * @Author: za-wangxuezhong
+ * @Date: 2019-11-17 22:19:51
+ * @LastEditors: za-wangxuezhong
+ * @LastEditTime: 2019-11-20 21:17:10
+ * @Description: file content
+ -->
+
+<h2 id="顺序图-基本语法"><a href="#顺序图-基本语法" class="headerlink" title="顺序图-基本语法"></a>顺序图-基本语法</h2><blockquote>
+<p>序列图是一个交互图，它显示进程如何相互操作以及以什么顺序进行操作。</p>
+</blockquote>
+<h3 id="渲染序列图"><a href="#渲染序列图" class="headerlink" title="渲染序列图"></a>渲染序列图</h3><pre><code class="bash">sequenceDiagram
+    Alice-&gt;&gt;John: Hello John, how are you?
+    John--&gt;&gt;Alice: Great!
+</code></pre>
+<pre class="mermaid">sequenceDiagram
+    Alice->>John: Hello John, how are you?
+    John-->>Alice: Great!</pre>
+
+<h3 id="句法"><a href="#句法" class="headerlink" title="句法"></a>句法</h3><p>参加者<br>可以像本页第一个示例中那样隐式定义参与者。在图表源文本中按出现顺序呈现参与者或演员。有时，您可能想以不同于第一条消息出现的顺序来显示参与者。通过执行以下操作可以指定演员的出场顺序</p>
+<pre><code class="bash">sequenceDiagram
+    participant John
+    participant Alice
+    Alice-&gt;&gt;John: Hello John, how are you?
+    John--&gt;&gt;Alice: Great!
+</code></pre>
+<pre class="mermaid">sequenceDiagram
+    participant John
+    participant Alice
+    Alice->>John: Hello John, how are you?
+    John-->>Alice: Great!</pre>
+
+<h3 id="别名"><a href="#别名" class="headerlink" title="别名"></a>别名</h3><p>演员可以具有方便的标识符和描述性标签。</p>
+<pre><code class="bash">sequenceDiagram
+    participant A as Alice
+    participant J as John
+    A-&gt;&gt;J: Hello John, how are you?
+    J-&gt;&gt;A: Great!
+</code></pre>
+<pre class="mermaid">sequenceDiagram
+    participant A as Alice
+    participant J as John
+    A->>J: Hello John, how are you?
+    J->>A: Great!</pre>
+
+<h3 id="留言内容"><a href="#留言内容" class="headerlink" title="留言内容"></a>留言内容</h3><p>消息可以是实线或虚线显示的两种。</p>
+<pre><code class="bash">[Actor][Arrow][Actor]:Message text
+</code></pre>
+<table>
+<thead>
+<tr>
+<th>类型</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>-&gt;</td>
+<td>实线无箭头</td>
+</tr>
+<tr>
+<td>-&gt;</td>
+<td>虚线无箭头</td>
+</tr>
+<tr>
+<td>-&gt;&gt;</td>
+<td>带箭头的实线</td>
+</tr>
+<tr>
+<td>-&gt;&gt;</td>
+<td>带箭头的虚线</td>
+</tr>
+<tr>
+<td>-X</td>
+<td>实线，末端带有叉号（异步）</td>
+</tr>
+<tr>
+<td>- X</td>
+<td>虚线末端带有叉号（异步）</td>
+</tr>
+</tbody></table>
+<h3 id="激活方式"><a href="#激活方式" class="headerlink" title="激活方式"></a>激活方式</h3><p>可以激活和停用角色。（de）激活可以是专用的声明：</p>
+<pre><code class="bash">sequenceDiagram
+    Alice-&gt;&gt;John: Hello John, how are you?
+    activate John
+    John--&gt;&gt;Alice: Great!
+    deactivate John
+</code></pre>
+<pre class="mermaid">sequenceDiagram
+    Alice->>John: Hello John, how are you?
+    activate John
+    John-->>Alice: Great!
+    deactivate John</pre>
+
+<p>通过在消息箭头后面添加+/ -后缀，还有一种快捷方式标记：</p>
+<pre><code class="bash">sequenceDiagram
+    Alice-&gt;&gt;+John: Hello John, how are you?
+    John--&gt;&gt;-Alice: Great!
+</code></pre>
+<pre class="mermaid">sequenceDiagram
+    Alice->>+John: Hello John, how are you?
+    John-->>-Alice: Great!</pre>
+
+<p>可以为同一演员堆叠激活：</p>
+<pre><code class="bash">sequenceDiagram
+    Alice-&gt;&gt;+John: Hello John, how are you?
+    Alice-&gt;&gt;+John: John, can you hear me?
+    John--&gt;&gt;-Alice: Hi Alice, I can hear you!
+    John--&gt;&gt;-Alice: I feel great!
+</code></pre>
+<pre class="mermaid">sequenceDiagram
+Alice->>+John: Hello John, how are you?
+Alice->>+John: John, can you hear me?
+John-->>-Alice: Hi Alice, I can hear you!
+John-->>-Alice: I feel great!</pre>
+
+<h3 id="笔记"><a href="#笔记" class="headerlink" title="笔记"></a>笔记</h3><p>可以在顺序图中添加注释。这是通过注解[[右| 左| 结束] [演员]：笔记内容中的文字</p>
+<p>请参阅以下示例</p>
+<pre><code class="bash">sequenceDiagram
+    participant John
+    Note right of John: Text in note
+</code></pre>
+<pre class="mermaid">sequenceDiagram
+    participant John
+    Note right of John: Text in note</pre>
+
+<p>也可以创建跨越两个参与者的笔记：</p>
+<pre><code class="bash">sequenceDiagram
+    Alice-&gt;John: Hello John, how are you?
+    Note over Alice,John: A typical interaction
+</code></pre>
+<pre class="mermaid">sequenceDiagram
+    Alice->John: Hello John, how are you?
+    Note over Alice,John: A typical interaction</pre>
+
+<h3 id="循环"><a href="#循环" class="headerlink" title="循环"></a>循环</h3><pre><code class="bash">loop Loop text
+... statements ...
+end
+</code></pre>
+<p>请参阅以下示例：</p>
+<pre><code class="bash">sequenceDiagram
+    Alice-&gt;John: Hello John, how are you?
+    loop Every minute
+        John--&gt;Alice: Great!
+    end
+</code></pre>
+<pre class="mermaid">sequenceDiagram
+Alice->John: Hello John, how are you?
+loop Every minute
+    John-->Alice: Great!
+end</pre>
+
+<h3 id="Alt键"><a href="#Alt键" class="headerlink" title="Alt键"></a>Alt键</h3><p>可以在顺序图中表达替代路径。这是通过符号来完成的</p>
+<pre><code class="bash">alt Describing text
+... statements ...
+else
+... statements ...
+end
+</code></pre>
+<p>或者是否有可选的序列（如果没有其他序列）。</p>
+<pre><code class="bash">opt Describing text
+... statements ...
+end
+</code></pre>
+<p>请参阅以下示例：</p>
+<pre><code class="bash">sequenceDiagram
+    Alice-&gt;&gt;Bob: Hello Bob, how are you?
+    alt is sick
+        Bob-&gt;&gt;Alice: Not so good :(
+    else is well
+        Bob-&gt;&gt;Alice: Feeling fresh like a daisy
+    end
+    opt Extra response
+        Bob-&gt;&gt;Alice: Thanks for asking
+    end
+</code></pre>
+<pre class="mermaid">sequenceDiagram
+    Alice->>Bob: Hello Bob, how are you?
+    alt is sick
+        Bob->>Alice: Not so good :(
+    else is well
+        Bob->>Alice: Feeling fresh like a daisy
+    end
+    opt Extra response
+        Bob->>Alice: Thanks for asking
+    end</pre>
+
+<h3 id="背景突出显示"><a href="#背景突出显示" class="headerlink" title="背景突出显示"></a>背景突出显示</h3><p>通过提供彩色背景矩形可以突出显示流。这是通过符号来完成的</p>
+<p>颜色是使用rgb和rgba语法定义的。</p>
+<pre><code class="bash">rect rgb(0, 255, 0)
+... content ...
+end
+</code></pre>
+<table>
+<thead>
+<tr>
+<th>Class</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>actor</td>
+<td>Style for the actor box at the top of the diagram.</td>
+</tr>
+<tr>
+<td>text.actor</td>
+<td>Styles for text in the actor box at the top of the diagram.</td>
+</tr>
+<tr>
+<td>actor-line</td>
+<td>The vertical line for an actor.</td>
+</tr>
+<tr>
+<td>messageLine0</td>
+<td>Styles for the solid message line.</td>
+</tr>
+<tr>
+<td>messageLine1</td>
+<td>Styles for the dotted message line.</td>
+</tr>
+<tr>
+<td>messageText</td>
+<td>Defines styles for the text on the message arrows.</td>
+</tr>
+<tr>
+<td>labelBox</td>
+<td>Defines styles label to left in a loop.</td>
+</tr>
+<tr>
+<td>labelText</td>
+<td>Styles for the text in label for loops.</td>
+</tr>
+<tr>
+<td>loopText</td>
+<td>Styles for the text in the loop box.</td>
+</tr>
+<tr>
+<td>loopLine</td>
+<td>Defines styles for the lines in the loop box.</td>
+</tr>
+<tr>
+<td>note</td>
+<td>Styles for the note box.</td>
+</tr>
+<tr>
+<td>noteText</td>
+<td>Styles for the text on in the note boxes.</td>
+</tr>
+</tbody></table>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/kity@2.0.4/dist/kity.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/kityminder-core@1.4.50/dist/kityminder.core.min.js"></script><script defer="true" type="text/javascript" src="https://cdn.jsdelivr.net/npm/hexo-simple-mindmap@0.2.0/dist/mindmap.min.js"></script><link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/hexo-simple-mindmap@0.2.0/dist/mindmap.min.css">
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <div>
+    
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/11/18/test/%E6%B5%81%E7%A8%8B%E5%9B%BE/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Tim wong">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="随笔集">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2019/11/18/test/%E6%B5%81%E7%A8%8B%E5%9B%BE/" itemprop="url">流程图</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-11-18T01:19:51+08:00">
+                2019-11-18
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/web/" itemprop="url" rel="index">
+                    <span itemprop="name">web</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <!--
+ * @Author: za-wangxuezhong
+ * @Date: 2019-11-17 22:19:51
+ * @LastEditors: za-wangxuezhong
+ * @LastEditTime: 2019-11-18 01:51:43
+ * @Description: file content
+ -->
+
+<h2 id="流程图-基本语法"><a href="#流程图-基本语法" class="headerlink" title="流程图-基本语法"></a>流程图-基本语法</h2><h3 id="这声明了一个从上到下（TD或TB）定向的图形"><a href="#这声明了一个从上到下（TD或TB）定向的图形" class="headerlink" title="这声明了一个从上到下（TD或TB）定向的图形"></a>这声明了一个从上到下（TD或TB）定向的图形</h3><pre><code class="bash">graph TD
+    Start --&gt; Stop
+</code></pre>
+<pre class="mermaid">graph TD
+    Start --> Stop</pre>
+
+<h3 id="这声明了一个从左到右的图（LR）"><a href="#这声明了一个从左到右的图（LR）" class="headerlink" title="这声明了一个从左到右的图（LR）"></a>这声明了一个从左到右的图（LR）</h3><pre><code class="bash">graph LR
+    Start --&gt; Stop
+</code></pre>
+<pre class="mermaid">graph LR
+    Start --> Stop</pre>
+
+<ul>
+<li>可能的方向是：</li>
+</ul>
+<ol>
+<li><p>TB-顶底</p>
+</li>
+<li><p>BT-底部顶部</p>
+</li>
+<li><p>RL-右左</p>
+</li>
+<li><p>LR-左右</p>
+</li>
+<li><p>TD-与TB相同</p>
+</li>
+</ol>
+<h3 id="节点和形状"><a href="#节点和形状" class="headerlink" title="节点和形状"></a>节点和形状</h3><h3 id="节点（默认）"><a href="#节点（默认）" class="headerlink" title="节点（默认）"></a>节点（默认）</h3><pre><code class="bash">graph LR
+    id
+</code></pre>
+<pre class="mermaid">graph LR
+    id</pre>
+
+<p>请注意，id是框中显示的ID。</p>
+<h3 id="带有文本的节点"><a href="#带有文本的节点" class="headerlink" title="带有文本的节点"></a>带有文本的节点</h3><pre><code class="bash">graph LR
+    id1[This is the text in the box]
+</code></pre>
+<pre class="mermaid">graph LR
+    id1[This is the text in the box]</pre>
+
+<p>也可以在不同于ID的框中设置文本。如果多次执行此操作，则这是将要使用的节点的最后一个文本。同样，如果稍后定义节点的边缘，则可以省略文本定义。渲染框时将使用先前定义的那个。</p>
+<h3 id="具有圆边的节点"><a href="#具有圆边的节点" class="headerlink" title="具有圆边的节点"></a>具有圆边的节点</h3><pre><code class="bash">graph LR
+    id1(This is the text in the box)
+</code></pre>
+<pre class="mermaid">graph LR
+    id1(This is the text in the box)</pre>
+
+<h3 id="圆形式的节点"><a href="#圆形式的节点" class="headerlink" title="圆形式的节点"></a>圆形式的节点</h3><pre><code class="bash">graph LR
+    id1((This is the text in the circle))
+</code></pre>
+<pre class="mermaid">graph LR
+    id1((This is the text in the circle))</pre>
+
+<h3 id="非对称形状的节点"><a href="#非对称形状的节点" class="headerlink" title="非对称形状的节点"></a>非对称形状的节点</h3><pre><code class="bash">graph LR
+    id1&gt;This is the text in the box]
+</code></pre>
+<pre class="mermaid">graph LR
+    id1>This is the text in the box]</pre>
+
+<p>当前，只有上面的形状是可能的，而不是它的镜子。这可能会随着将来的版本而改变。</p>
+<h3 id="一个节点（菱形）"><a href="#一个节点（菱形）" class="headerlink" title="一个节点（菱形）"></a>一个节点（菱形）</h3><pre><code class="bash">graph LR
+    id1{This is the text in the box}
+</code></pre>
+<pre class="mermaid">graph LR
+    id1{This is the text in the box}</pre>
+
+<h3 id="梯形"><a href="#梯形" class="headerlink" title="梯形"></a>梯形</h3><pre><code class="bash">graph TD
+    A[/Christmas\]
+</code></pre>
+<pre class="mermaid">graph TD
+    A[/Christmas\]</pre>
+
+<h3 id="梯形alt"><a href="#梯形alt" class="headerlink" title="梯形alt"></a>梯形alt</h3><pre><code class="bash">graph TD
+    B[\Go shopping/]
+</code></pre>
+<pre class="mermaid">graph TD
+    B[\Go shopping/]</pre>
+
+<h3 id="节点之间的链接"><a href="#节点之间的链接" class="headerlink" title="节点之间的链接"></a>节点之间的链接</h3><p>节点可以通过链接/边缘连接。可以具有不同类型的链接，也可以将文本字符串附加到链接。</p>
+<h3 id="箭头链接"><a href="#箭头链接" class="headerlink" title="箭头链接"></a>箭头链接</h3><pre><code class="bash">graph LR
+    A--&gt;B
+</code></pre>
+<pre class="mermaid">graph LR
+    A-->B</pre>
+
+<h3 id="一个开放的链接"><a href="#一个开放的链接" class="headerlink" title="一个开放的链接"></a>一个开放的链接</h3><pre><code class="bash">graph LR
+    A --- B
+</code></pre>
+<pre class="mermaid">graph LR
+    A --- B</pre>
+
+<h3 id="链接上的文字"><a href="#链接上的文字" class="headerlink" title="链接上的文字"></a>链接上的文字</h3><pre><code class="bash">graph LR
+    A-- This is the text ---B
+</code></pre>
+<pre class="mermaid">graph LR
+    A-- This is the text ---B</pre>
+
+<p>或者</p>
+<pre><code class="bash">graph LR
+    A---|This is the text|B
+</code></pre>
+<h3 id="带有箭头和文字的链接"><a href="#带有箭头和文字的链接" class="headerlink" title="带有箭头和文字的链接"></a>带有箭头和文字的链接</h3><pre><code class="bash">graph LR
+    A--&gt;|text|B
+</code></pre>
+<pre class="mermaid">graph LR
+    A-->|text|B</pre>
+
+<p>或者</p>
+<pre><code class="base">graph LR
+    A-- text --&gt;B
+</code></pre>
+<h3 id="虚线链接"><a href="#虚线链接" class="headerlink" title="虚线链接"></a>虚线链接</h3><pre><code class="bash">graph LR;
+   A-.-&gt;B;
+</code></pre>
+<pre class="mermaid">graph LR;
+   A-.->B;</pre>
+
+<h3 id="带文字的虚线链接"><a href="#带文字的虚线链接" class="headerlink" title="带文字的虚线链接"></a>带文字的虚线链接</h3><pre><code class="bash">graph LR
+   A-. text .-&gt; B
+</code></pre>
+<pre class="mermaid">graph LR
+   A-. text .-> B</pre>
+
+<h3 id="粗链接"><a href="#粗链接" class="headerlink" title="粗链接"></a>粗链接</h3><pre><code class="bash">graph LR
+   A ==&gt; B
+</code></pre>
+<pre class="mermaid">graph LR
+   A ==> B</pre>
+
+<h3 id="带有文字的粗链接"><a href="#带有文字的粗链接" class="headerlink" title="带有文字的粗链接"></a>带有文字的粗链接</h3><pre><code class="bash">graph LR
+   A == text ==&gt; B
+</code></pre>
+<pre class="mermaid">graph LR
+   A == text ==> B</pre>
+
+<h3 id="链接链接"><a href="#链接链接" class="headerlink" title="链接链接"></a>链接链接</h3><p>可以按如下所示在同一行中声明许多链接：</p>
+<pre><code class="bash">graph LR
+   A -- text --&gt; B -- text2 --&gt; C
+</code></pre>
+<pre class="mermaid">graph LR
+   A -- text --> B -- text2 --> C</pre>
+
+<h3 id="破坏语法的特殊字符"><a href="#破坏语法的特殊字符" class="headerlink" title="破坏语法的特殊字符"></a>破坏语法的特殊字符</h3><pre><code class="bash">graph LR
+    id1[&quot;This is the (text) in the box&quot;]
+</code></pre>
+<pre class="mermaid">graph LR
+    id1["This is the (text) in the box"]</pre>
+
+<h3 id="实体代码以转义字符"><a href="#实体代码以转义字符" class="headerlink" title="实体代码以转义字符"></a>实体代码以转义字符</h3><pre><code class="bash">graph LR
+    A[&quot;A double quote:#quot;&quot;] --&gt;B[&quot;A dec char:#9829;&quot;]
+</code></pre>
+<pre class="mermaid">graph LR
+    A["A double quote:#quot;"] -->B["A dec char:#9829;"]</pre>
+
+<h3 id="子图"><a href="#子图" class="headerlink" title="子图"></a>子图</h3><pre><code class="bash">subgraph title
+    graph definition
+end</code></pre>
+<h3 id="子图案例"><a href="#子图案例" class="headerlink" title="子图案例"></a>子图案例</h3><pre><code class="bash">graph TB
+    c1--&gt;a2
+    subgraph one
+    a1--&gt;a2
+    end
+    subgraph two
+    b1--&gt;b2
+    end
+    subgraph three
+    c1--&gt;c2
+    end
+</code></pre>
+<pre class="mermaid">graph TB
+    c1-->a2
+    subgraph one
+    a1-->a2
+    end
+    subgraph two
+    b1-->b2
+    end
+    subgraph three
+    c1-->c2
+    end</pre>
+
+<h3 id="相互作用"><a href="#相互作用" class="headerlink" title="相互作用"></a>相互作用</h3><p>可以将click事件绑定到节点，单击可能导致JavaScript回调或链接，该链接将在新的浏览器选项卡中打开。注意：使用securityLevel=’strict’时将禁用此功能，使用时将启用securityLevel=’loose’。</p>
+<pre><code class="bash">click nodeId callback
+</code></pre>
+<ul>
+<li>nodeId是节点的ID</li>
+<li>callback是在显示图形的页面上定义的javascript函数的名称，该函数将使用nodeId作为参数来调用。<br>以下是工具提示用法的示例：</li>
+</ul>
+<pre><code class="bash">&lt;script&gt;
+    var callback = function(){
+        alert(&#39;A callback was triggered&#39;);
+    }
+&lt;script&gt;
+</code></pre>
+<p>工具提示文本用双引号引起来。工具提示的样式由.mermaidTooltip类设置。</p>
+<pre class="mermaid">graph LR;
+    A-->B;
+    click A callback "Tooltip for a callback"
+    click B "http://www.github.com" "This is a tooltip for a link"</pre>
+
+<pre><code class="bash">graph LR;
+    A--&gt;B;
+    click A callback &quot;Tooltip for a callback&quot;
+    click B &quot;http://www.github.com&quot; &quot;This is a tooltip for a link&quot;
+</code></pre>
+<h3 id="样式节点链接"><a href="#样式节点链接" class="headerlink" title="样式节点链接"></a>样式节点链接</h3><h3 id="样式链接"><a href="#样式链接" class="headerlink" title="样式链接"></a>样式链接</h3><p>可以设置链接样式。例如，您可能想要设置在流程中向后移动的链接的样式。由于链接没有ID的方式与节点相同，因此需要某种其他方式来确定链接应附加到的样式。在图表中定义链接时使用的订单号代替id。在下面的示例中，linkStyle语句中定义的样式将属于图中的第四个链接：</p>
+<pre><code class="bash">linkStyle 3 stroke:#ff3,stroke-width:4px;
+
+</code></pre>
+<h3 id="设置节点样式"><a href="#设置节点样式" class="headerlink" title="设置节点样式"></a>设置节点样式</h3><p>可以将特定样式（例如，较粗的边框或不同的背景颜色）应用于节点。</p>
+<pre><code class="bash">graph LR
+    id1(Start)--&gt;id2(Stop)
+    style id1 fill:#f9f,stroke:#333,stroke-width:4px
+    style id2 fill:#ccf,stroke:#f66,stroke-width:2px,stroke-dasharray: 5, 5
+
+</code></pre>
+<pre class="mermaid">graph LR
+    id1(Start)-->id2(Stop)
+    style id1 fill:#f9f,stroke:#333,stroke-width:4px
+    style id2 fill:#ccf,stroke:#f66,stroke-width:2px,stroke-dasharray: 5, 5</pre>
+
+<h3 id="班级"><a href="#班级" class="headerlink" title="班级"></a>班级</h3><p>每次定义样式时，更方便的方法是定义一类样式，并将该类附加到应具有不同外观的节点上。</p>
+<p>类定义如下例所示：</p>
+<pre><code class="bash">classDef className fill:#f9f,stroke:#333,stroke-width:4px;
+</code></pre>
+<p>将类附加到节点的操作如下:</p>
+<pre><code class="bash">class nodeId1 className;
+</code></pre>
+<p>也可以在一个语句中将类附加到节点列表：</p>
+<pre><code class="bash">class nodeId1,nodeId2 className;
+</code></pre>
+<h3 id="CSS类"><a href="#CSS类" class="headerlink" title="CSS类"></a>CSS类</h3><p>也可以以css样式预定义可从图形定义中应用的类，如下例所示：</p>
+<p>示例样式:</p>
+<pre><code class="bash">&lt;style&gt;
+    .cssClass &gt; rect{
+        fill:#FF0000;
+        stroke:#FFFF00;
+        stroke-width:4px;
+    }
+&lt;/style&gt;
+</code></pre>
+<p>示例定义:</p>
+<pre><code class="bash">graph LR;
+    A--&gt;B[AAA&lt;span&gt;BBB&lt;/span&gt;];
+    B--&gt;D;
+    class A cssClass;
+</code></pre>
+<pre class="mermaid">graph LR;
+    A-->B[AAA<span>BBB</span>];
+    B-->D;
+    class A cssClass;</pre>
+
+<h3 id="默认类"><a href="#默认类" class="headerlink" title="默认类"></a>默认类</h3><p>如果一个类被命名为default，它将被分配给所有没有特定类定义的类。</p>
+<pre><code class="bash">classDef default fill:#f9f,stroke:#333,stroke-width:4px;
+</code></pre>
+<h3 id="基本支持fontawesome"><a href="#基本支持fontawesome" class="headerlink" title="基本支持fontawesome"></a>基本支持fontawesome</h3><p>可以从fontawesome添加图标。</p>
+<p>通过语法fa：#icon类名＃来访问图标。</p>
+<pre><code class="bash">graph TD
+    B[&quot;fa:fa-twitter for peace&quot;]
+    B--&gt;C[fa:fa-ban forbidden]
+    B--&gt;D(fa:fa-spinner);
+    B--&gt;E(A fa:fa-camera-retro perhaps?);
+</code></pre>
+<pre class="mermaid">graph TD
+    B["fa:fa-twitter for peace"]
+    B-->C[fa:fa-ban forbidden]
+    B-->D(fa:fa-spinner);
+    B-->E(A fa:fa-camera-retro perhaps?);</pre>
+
+<h3 id="图的声明在顶点和链接之间有空格，并且没有分号"><a href="#图的声明在顶点和链接之间有空格，并且没有分号" class="headerlink" title="图的声明在顶点和链接之间有空格，并且没有分号"></a>图的声明在顶点和链接之间有空格，并且没有分号</h3><ul>
+<li><p>在图形声明中，语句现在也可以不使用分号结束。在0.2.16版本之后，以分号结束图语句只是可选的。因此，下面的图声明与图的旧声明同样有效。</p>
+</li>
+<li><p>顶点和链接之间只能有一个空格。但是，顶点和其文本以及链接和其文本之间不应有任何空格。图形声明的旧语法也将起作用，因此，此新功能是可选的，旨在提高可读性。</p>
+</li>
+</ul>
+<p>以下是图边缘的新声明，该声明与图边缘的旧声明同样有效。</p>
+<pre><code class="bash">graph LR
+    A[Hard edge] --&gt;|Link text| B(Round edge)
+    B --&gt; C{Decision}
+    C --&gt;|One| D[Result one]
+    C --&gt;|Two| E[Result two]
+</code></pre>
+<pre class="mermaid">graph LR
+    A[Hard edge] -->|Link text| B(Round edge)
+    B --> C{Decision}
+    C -->|One| D[Result one]
+    C -->|Two| E[Result two]</pre>
+
+<h3 id="组态"><a href="#组态" class="headerlink" title="组态"></a>组态</h3><p>是否可以调整渲染流程图的宽度。</p>
+<p>这是通过定义mermaid.flowchartConfig或通过CLI在配置中使用json文件来完成的。mermaidCLI页面中描述了如何使用CLI。可以将mermaid.flowchartConfig设置为带有配置参数或相应对象的JSON字符串。</p>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/kity@2.0.4/dist/kity.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/kityminder-core@1.4.50/dist/kityminder.core.min.js"></script><script defer="true" type="text/javascript" src="https://cdn.jsdelivr.net/npm/hexo-simple-mindmap@0.2.0/dist/mindmap.min.js"></script><link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/hexo-simple-mindmap@0.2.0/dist/mindmap.min.css">
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <div>
+    
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/11/18/test/%E5%9B%BE%E8%A1%A8%E7%A4%BA%E4%BE%8B%E4%BB%A3%E7%A0%81/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Tim wong">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="随笔集">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2019/11/18/test/%E5%9B%BE%E8%A1%A8%E7%A4%BA%E4%BE%8B%E4%BB%A3%E7%A0%81/" itemprop="url">图表示例代码</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-11-18T00:19:51+08:00">
+                2019-11-18
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/web/" itemprop="url" rel="index">
+                    <span itemprop="name">web</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <!--
+ * @Author: za-wangxuezhong
+ * @Date: 2019-11-19 18:01:29
+ * @LastEditors: za-wangxuezhong
+ * @LastEditTime: 2019-11-20 11:08:38
+ * @Description: file content
+ -->
+
+<h2 id="简单图表"><a href="#简单图表" class="headerlink" title="简单图表"></a>简单图表</h2><h3 id="简易流程图"><a href="#简易流程图" class="headerlink" title="简易流程图"></a>简易流程图</h3><pre class="mermaid">graph TD;
+    A-->B;
+    A-->C;
+    B-->D;
+    C-->D;</pre>
+
+<pre><code class="base">graph TD;
+    A--&gt;B;
+    A--&gt;C;
+    B--&gt;D;
+    C--&gt;D;
+</code></pre>
+<h3 id="关系图"><a href="#关系图" class="headerlink" title="关系图"></a>关系图</h3><pre class="mermaid">graph TB
+    c1-->a2
+    subgraph one
+    a1-->a2
+    end
+    subgraph two
+    b1-->b2
+    end
+    subgraph three
+    c1-->c2
+    end</pre>
+
+<pre><code class="base">graph TB
+    c1--&gt;a2
+    subgraph one
+    a1--&gt;a2
+    end
+    subgraph two
+    b1--&gt;b2
+    end
+    subgraph three
+    c1--&gt;c2
+    end
+</code></pre>
+<h3 id="流程图"><a href="#流程图" class="headerlink" title="流程图"></a>流程图</h3><pre class="mermaid">sequenceDiagram
+    participant Alice
+    participant Bob
+    Alice->>John: Hello John, how are you?
+    loop Healthcheck
+        John->>John: Fight against hypochondria
+    end
+    Note right of John: Rational thoughts <br/>prevail!
+    John-->>Alice: Great!
+    John->>Bob: How about you?
+    Bob-->>John: Jolly good!</pre>
+
+<pre><code class="base">sequenceDiagram
+    participant Alice
+    participant Bob
+    Alice-&gt;&gt;John: Hello John, how are you?
+    loop Healthcheck
+        John-&gt;&gt;John: Fight against hypochondria
+    end
+    Note right of John: Rational thoughts &lt;br/&gt;prevail!
+    John--&gt;&gt;Alice: Great!
+    John-&gt;&gt;Bob: How about you?
+    Bob--&gt;&gt;John: Jolly good!
+</code></pre>
+<h3 id="甘特图"><a href="#甘特图" class="headerlink" title="甘特图"></a>甘特图</h3><pre class="mermaid">gantt
+    dateFormat  YYYY-MM-DD
+    title Adding GANTT diagram to mermaid
+    excludes weekdays 2014-01-10
+
+    section A section
+    Completed task            :done,    des1, 2014-01-06,2014-01-08
+    Active task               :active,  des2, 2014-01-09, 3d
+    Future task               :         des3, after des2, 5d
+    Future task2               :         des4, after des3, 5d</pre>
+
+<pre><code class="base">gantt
+    dateFormat  YYYY-MM-DD
+    title Adding GANTT diagram to mermaid
+    excludes weekdays 2014-01-10
+
+    section A section
+    Completed task            :done,    des1, 2014-01-06,2014-01-08
+    Active task               :active,  des2, 2014-01-09, 3d
+    Future task               :         des3, after des2, 5d
+    Future task2               :         des4, after des3, 5d
+</code></pre>
+<pre class="mermaid">classDiagram
+Class01 <|-- AveryLongClass : Cool
+Class03 *-- Class04
+Class05 o-- Class06
+Class07 .. Class08
+Class09 --> C2 : Where am i?
+Class09 --* C3
+Class09 --|> Class07
+Class07 : equals()
+Class07 : Object[] elementData
+Class01 : size()
+Class01 : int chimp
+Class01 : int gorilla
+Class08 <--> C2: Cool label</pre>
+
+<pre><code class="base">classDiagram
+    Class01 &lt;|-- AveryLongClass : Cool
+    Class03 *-- Class04
+    Class05 o-- Class06
+    Class07 .. Class08
+    Class09 --&gt; C2 : Where am i?
+    Class09 --* C3
+    Class09 --|&gt; Class07
+    Class07 : equals()
+    Class07 : Object[] elementData
+    Class01 : size()
+    Class01 : int chimp
+    Class01 : int gorilla
+    Class08 &lt;--&gt; C2: Cool label
+</code></pre>
+<h3 id="git图"><a href="#git图" class="headerlink" title="git图"></a>git图</h3><pre class="mermaid">gitGraph:
+options
+{
+    "nodeSpacing": 130,
+    "nodeRadius": 5
+}
+end
+commit
+
+commit
+
+branch newbranch
+
+checkout newbranch
+
+commit
+commit
+
+checkout master
+commit
+commit
+merge newbranch</pre>
+
+<pre><code class="base">gitGraph:
+options
+{
+    &quot;nodeSpacing&quot;: 150,
+    &quot;nodeRadius&quot;: 10
+}
+end
+commit
+branch newbranch
+checkout newbranch
+commit
+commit
+checkout master
+commit
+commit
+merge newbranch
+</code></pre>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/kity@2.0.4/dist/kity.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/kityminder-core@1.4.50/dist/kityminder.core.min.js"></script><script defer="true" type="text/javascript" src="https://cdn.jsdelivr.net/npm/hexo-simple-mindmap@0.2.0/dist/mindmap.min.js"></script><link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/hexo-simple-mindmap@0.2.0/dist/mindmap.min.css">
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <div>
+    
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/11/17/test/%E4%B8%BA%E4%BB%80%E4%B9%88%E7%94%A8axios%E4%B8%8D%E7%94%A8ajax/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Tim wong">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="随笔集">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2019/11/17/test/%E4%B8%BA%E4%BB%80%E4%B9%88%E7%94%A8axios%E4%B8%8D%E7%94%A8ajax/" itemprop="url">为什么用axios不用ajax</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-11-17T22:19:51+08:00">
+                2019-11-17
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <!--
+ * @Author: za-wangxuezhong
+ * @Date: 2019-11-17 22:19:51
+ * @LastEditors: za-wangxuezhong
+ * @LastEditTime: 2019-11-26 16:08:03
+ * @Description: file content
+ -->
+
+<h2 id="为什么用axios不用ajax"><a href="#为什么用axios不用ajax" class="headerlink" title="为什么用axios不用ajax"></a>为什么用axios不用ajax</h2><h3 id="区别：axios是通过Promise实现对ajax技术的一种封装，就像jquery对ajax的封装一样，简单来说就是ajax技术实现了局部数据的刷新，axios实现了对ajax的封装，axios有的ajax都有，ajax有的axios不一定有，总结一句话就是axios是ajax，ajax不止axios"><a href="#区别：axios是通过Promise实现对ajax技术的一种封装，就像jquery对ajax的封装一样，简单来说就是ajax技术实现了局部数据的刷新，axios实现了对ajax的封装，axios有的ajax都有，ajax有的axios不一定有，总结一句话就是axios是ajax，ajax不止axios" class="headerlink" title="区别：axios是通过Promise实现对ajax技术的一种封装，就像jquery对ajax的封装一样，简单来说就是ajax技术实现了局部数据的刷新，axios实现了对ajax的封装，axios有的ajax都有，ajax有的axios不一定有，总结一句话就是axios是ajax，ajax不止axios"></a>区别：axios是通过Promise实现对ajax技术的一种封装，就像jquery对ajax的封装一样，简单来说就是ajax技术实现了局部数据的刷新，axios实现了对ajax的封装，axios有的ajax都有，ajax有的axios不一定有，总结一句话就是axios是ajax，ajax不止axios</h3><h3 id="优缺点"><a href="#优缺点" class="headerlink" title="优缺点"></a>优缺点</h3><h3 id="ajax"><a href="#ajax" class="headerlink" title="ajax"></a>ajax</h3><ol>
+<li><p>本身是针对MVC编程，不符合前端MVVM的浪潮</p>
+</li>
+<li><p>基于原生XHR开发，XHR本身的架构不清晰，已经有了fetch的替代方案，jquery整个项目太大，单纯使用ajax却要引入整个jquery非常不合理（采取个性化打包方案又不能享受cdn服务）</p>
+</li>
+<li><p>ajax不支持浏览器的back按钮</p>
+</li>
+<li><p>安全问题ajax暴露了与服务器交互的细节</p>
+</li>
+<li><p>对搜索引擎的支持比较弱</p>
+</li>
+<li><p>破坏程序的异常机制</p>
+</li>
+<li><p>不容易调试</p>
+</li>
+</ol>
+<h3 id="axios"><a href="#axios" class="headerlink" title="axios"></a>axios</h3><ol>
+<li><p>从node.js创建http请求</p>
+</li>
+<li><p>支持Promise API</p>
+</li>
+<li><p>客户端防止CSRF（网站恶意利用）</p>
+</li>
+<li><p>提供了一些并发请求的接口</p>
+</li>
+</ol>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/kity@2.0.4/dist/kity.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/kityminder-core@1.4.50/dist/kityminder.core.min.js"></script><script defer="true" type="text/javascript" src="https://cdn.jsdelivr.net/npm/hexo-simple-mindmap@0.2.0/dist/mindmap.min.js"></script><link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/hexo-simple-mindmap@0.2.0/dist/mindmap.min.css">
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <div>
+    
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+  </section>
+
+  
+
+
+          </div>
+          
+
+
+          
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+
+      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <p class="site-author-name" itemprop="name">Tim wong</p>
+              <p class="site-description motion-element" itemprop="description"></p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives">
+              
+                  <span class="site-state-item-count">10</span>
+                  <span class="site-state-item-name">posts</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-categories">
+                
+                  <span class="site-state-item-count">2</span>
+                  <span class="site-state-item-name">categories</span>
+                
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                <a href="/tags/index.html">
+                  <span class="site-state-item-count">1</span>
+                  <span class="site-state-item-name">tags</span>
+                </a>
+              </div>
+            
+
+          </nav>
+
+          
+            <div class="feed-link motion-element">
+              <a href="/atom.xml" rel="alternate">
+                <i class="fa fa-rss"></i>
+                RSS
+              </a>
+            </div>
+          
+
+          
+
+          
+          
+
+          
+          
+
+          
+
+        </div>
+      </section>
+
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2020</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Tim wong</span>
+
+  
 </div>
 
 
-</body>
-<script src="/js/jquery.pjax.js?v=1.0.1" ></script>
+  <div class="powered-by">Powered by <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a></div>
 
-<script src="/js/script.js?v=1.0.1" ></script>
-<script>
-    var img_resize = 'default';
-    /*作者、标签的自动补全*/
-    $(function () {
-        $('.search').AutoComplete({
-            'data': ['#frist',],
-            'itemHeight': 20,
-            'width': 418
-        }).AutoComplete('show');
-    })
-    function initArticle() {
-        /*渲染对应的表格样式*/
-        
-            $(".post .pjax table").addClass("green_title");
-        
 
-        /*渲染打赏样式*/
-        
-        $("input[name=pay]").on("click", function () {
-            if($("input[name=pay]:checked").val()=="weixin"){
-                $(".shang_box .shang_payimg .pay_img").addClass("weixin_img");
-            } else {
-                $(".shang_box .shang_payimg .pay_img").removeClass("weixin_img");
-            }
-        })
-        
 
-        /*高亮代码块行号*/
-        
-        $('pre code').each(function(){
-            var lines = $(this).text().split('\n').length - 1, widther='';
-            if (lines>99) {
-                widther = 'widther'
-            }
-            var $numbering = $('<ul/>').addClass('pre-numbering ' + widther).attr("unselectable","on");
-            $(this).addClass('has-numbering ' + widther)
-                    .parent()
-                    .append($numbering);
-            for(var i=1;i<=lines;i++){
-                $numbering.append($('<li/>').text(i));
-            }
-        });
-        
+  <span class="post-meta-divider">|</span>
 
-        /*访问数量*/
-        
-        $.getScript("//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js");
-        
 
-        /*代码高亮，行号对齐*/
-        $('.pre-numbering').css('line-height',$('.has-numbering').css('line-height'));
 
-        
-        
-        /* 渲染*/
-        function HTMLDecode(text) {
-            var temp = document.createElement("div");
-            temp.innerHTML = text;
-            var output = temp.innerText || temp.textContent;
-            temp = null;
-            return output;
-        }
-        if (window.mermaid){
-            window.mermaid = null
-        }
-        $.getScript("//cdn.jsdelivr.net/npm/mermaid@8.4.2/dist/mermaid.min.js", function () {
-            var mermaidOptions = JSON.parse(HTMLDecode("{&#34;theme&#34;:&#34;default&#34;,&#34;startOnLoad&#34;:true,&#34;flowchart&#34;:{&#34;useMaxWidth&#34;:false,&#34;htmlLabels&#34;:true}}"))
-            if (window.mermaid) {
-                mermaid.initialize(mermaidOptions)
-                mermaid.contentLoaded()
-            }
-        })
-        
+  <div class="theme-info">Theme &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Mist</a> v5.1.4</div>
+
+
+
+
+
+  <script src='https://unpkg.com/mermaid@7.1.2/dist/mermaid.min.js'></script>
+  <script>
+    if (window.mermaid) {
+      mermaid.initialize({theme: 'forest'});
     }
+  </script>
 
-    /*打赏页面隐藏与展示*/
+
+        
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
     
-    function dashangToggle() {
-        $(".shang_box").fadeToggle();
-        $(".hide_box").fadeToggle();
-    }
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
     
 
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
 </script>
 
-<!--加入行号的高亮代码块样式-->
-
-<style>
-    pre{
-        position: relative;
-        margin-bottom: 24px;
-        border-radius: 10px;
-        border: 1px solid #e2dede;
-        background: #FFF;
-        overflow: hidden;
-    }
-    code.has-numbering{
-        margin-left: 30px;
-    }
-    code.has-numbering.widther{
-        margin-left: 35px;
-    }
-    .pre-numbering{
-        margin: 0px;
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 20px;
-        padding: 0.5em 3px 0.7em 5px;
-        border-right: 1px solid #C3CCD0;
-        text-align: right;
-        color: #AAA;
-        background-color: ;
-    }
-    .pre-numbering.widther {
-        width: 35px;
-    }
-</style>
-
-<!--自定义样式设置-->
-<style>
-    
-    
-    .nav {
-        width: 542px;
-    }
-    .nav.fullscreen {
-        margin-left: -542px;
-    }
-    .nav-left {
-        width: 120px;
-    }
-    
-    
-    @media screen and (max-width: 1468px) {
-        .nav {
-            width: 492px;
-        }
-        .nav.fullscreen {
-            margin-left: -492px;
-        }
-        .nav-left {
-            width: 100px;
-        }
-    }
-    
-    
-    @media screen and (max-width: 1024px) {
-        .nav {
-            width: 492px;
-            margin-left: -492px
-        }
-        .nav.fullscreen {
-            margin-left: 0;
-        }
-        .nav .hide-list.fullscreen {
-            left: 492px
-        }
-    }
-    
-    @media screen and (max-width: 426px) {
-        .nav {
-            width: 100%;
-        }
-        .nav-left {
-            width: 100%;
-        }
-    }
-    
-    
-    .nav-right .title-list nav a .post-title, .nav-right .title-list #local-search-result a .post-title {
-        color: #383636;
-    }
-    
-    
-    .nav-right .title-list nav a .post-date, .nav-right .title-list #local-search-result a .post-date {
-        color: #5e5e5f;
-    }
-    
-    
-    .nav-right nav a.hover, #local-search-result a.hover{
-        background-color: #e2e0e0;
-    }
-    
-    
-
-    /*列表样式*/
-    
-    .post .pjax article .article-entry>ol, .post .pjax article .article-entry>ul, .post .pjax article>ol, .post .pjax article>ul{
-        border: #e2dede solid 1px;
-        border-radius: 10px;
-        padding: 10px 32px 10px 56px;
-    }
-    .post .pjax article .article-entry li>ol, .post .pjax article .article-entry li>ul,.post .pjax article li>ol, .post .pjax article li>ul{
-        padding-top: 5px;
-        padding-bottom: 5px;
-    }
-    .post .pjax article .article-entry>ol>li, .post .pjax article .article-entry>ul>li,.post .pjax article>ol>li, .post .pjax article>ul>li{
-        margin-bottom: auto;
-        margin-left: auto;
-    }
-    .post .pjax article .article-entry li>ol>li, .post .pjax article .article-entry li>ul>li,.post .pjax article li>ol>li, .post .pjax article li>ul>li{
-        margin-bottom: auto;
-        margin-left: auto;
-    }
-    
-
-    /* 背景图样式 */
-    
-    
-
-
-    /*引用块样式*/
-    
-
-    /*文章列表背景图*/
-    
-
-    
-</style>
 
 
 
@@ -635,11 +3031,132 @@
 
 
 
-<div id="musicMouseDrag" style="position:fixed; z-index: 9999; bottom: -100; right: 0;">
-    <div id="musicDragArea"
-        style="position: absolute; top: 0; left: 0; width: 100%;height: 10px;cursor: move; z-index: 10;"></div>
-    <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=298 height=52
-        src="//music.163.com/outchain/player?type=2&id=5273817&auto=1&height=32"></iframe>
-</div>
 
+  
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/canvas-nest/canvas-nest.min.js"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
+
+
+
+  
+  
+
+  
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+  
+
+  
+
+  
+
+  
+
+</body>
 </html>
